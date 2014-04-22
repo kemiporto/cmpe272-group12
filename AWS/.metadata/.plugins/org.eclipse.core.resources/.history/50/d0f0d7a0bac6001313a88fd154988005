@@ -1,0 +1,25 @@
+<html>
+<head>
+<title>Create Table</title>
+</head>
+
+<body>
+	<div>
+		<div style="font-weight: bold; text-align: center">Create Table</div>
+		<div style="text-align: center">
+			Table Name: <input type="text" value="" />
+			<input type="button" value="Create Table" /> Goto "Add New Data"
+		</div>
+		<% ArrayList tableNames = request.getAttribute("tableName"); %>
+		<div style="font-weight: bold; text-align: center">
+			Append To Table
+			<select>
+				<option value=""></option>
+			</select>
+		</div>
+		<div style="text-align: center">
+			<input type="button" value="Select Table" /> Goto "Add New Data"
+		</div>
+	</div>
+</body>
+</html>

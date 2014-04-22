@@ -1,0 +1,3 @@
+INDEX VERSION 1.127
+/Users/miteshkatakwar/workspace-sts-3.5.0.RELEASE/AWS/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/2320092575.index
+/ESPAWSProject/src
