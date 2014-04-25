@@ -16,7 +16,16 @@ and open the template in the editor.
             {
                 window.location="Homepage.php";
             }
-        </script>      	
+        </script>
+	     <script type="text/javascript">
+	     	function getTitleBarNavigation()
+	        {
+	        	var navigation = [];
+	            navigation.push( ["<a class='navbar-brand' href='HomePage.php' >Home</a>"] );
+	            navigation.push( ["<a class='navbar-brand' href='SelectTablePage.php' >Select Table</a>"] );
+	            return navigation;
+	        }
+	    </script>        	
     </head>
 
     <body> 

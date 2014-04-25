@@ -11,6 +11,16 @@
         	window.location="SelectTablePage.php";
         }
      </script>
+     <script type="text/javascript">
+     	function getTitleBarNavigation()
+        {
+        	var navigation = [];
+            navigation.push( ["<a class='navbar-brand' href='HomePage.php' >Home</a>"] );
+            navigation.push( ["<a class='navbar-brand' href='SelectTablePage.php' >Select Table</a>"] );
+            navigation.push( ["<a class='navbar-brand' href='ViewChat.php' >ViewChat</a>"] );
+            return navigation;
+        }
+    </script>  
      
     <!--Loading Google Charts-->
     <meta charset="UTF-8">

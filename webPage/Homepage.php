@@ -9,18 +9,20 @@
     	<script> $(function(){ $("#titleBar").load("TitleBar.html"); } ); </script>  
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
         <script type="text/javascript">
-            function navigateTo()
-            {
-                window.location="SelectTablePage.php";
-            }
-        </script>
-        <script type="text/javascript">
             function navigateBack()
             {
                 window.location="Homepage.php";
             }
+        </script>
+        <script type="text/javascript">
+            function getTitleBarNavigation()
+            {
+                var navigation = [];
+                navigation.push( ["<a class='navbar-brand' href='HomePage.php' >Home</a>"] );
+                return navigation;
+            }
         </script>      	
-    </head>   
+    </head>
 
     <body> 
      <div id="titleBar"></div>

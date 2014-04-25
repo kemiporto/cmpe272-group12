@@ -11,6 +11,17 @@
         	window.location="HomePage.php";
         }
      </script>
+	     <script type="text/javascript">
+	     	function getTitleBarNavigation()
+	        {
+	        	var navigation = [];
+	            navigation.push( ["<a class='navbar-brand' href='HomePage.php' >Home</a>"] );
+	            navigation.push( ["<a class='navbar-brand' href='Create Table.php' >Data Management</a>"] );
+	            navigation.push( ["<a class='navbar-brand' href='AddNewDataPage.php' >Add Data Point</a>"] );
+	            return navigation;
+	        }
+	    </script>
+	</head>
 
     <body> 
      <div id="titleBar"></div>

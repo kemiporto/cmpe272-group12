@@ -2,16 +2,26 @@
 	
 	<!-- Includes -->
     <head>
-    <script src="js/jquery.js"></script>
-    <script> $(function(){ $("#titleBar").load("TitleBar.html"); } ); </script>  
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-    <script type="text/javascript">
-    	function navigateBack()
-        {
-        	window.location="HomePage.php";
-        }
-     </script>
-
+	    <script src="js/jquery.js"></script>
+	    <script> $(function(){ $("#titleBar").load("TitleBar.html"); } ); </script>  
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	    <script type="text/javascript">
+	    	function navigateBack()
+	        {
+	        	window.location="HomePage.php";
+	        }
+	     </script>
+	     <script type="text/javascript">
+	     	function getTitleBarNavigation()
+	        {
+	        	var navigation = [];
+	            navigation.push( ["<a class='navbar-brand' href='HomePage.php' >Home</a>"] );
+	            navigation.push( ["<a class='navbar-brand' href='Create Table.php' >Data Management</a>"] );
+	            return navigation;
+	        }
+	    </script>
+	 </head>   
+	    
     <body> 
      <div id="titleBar"></div>
     </body>
