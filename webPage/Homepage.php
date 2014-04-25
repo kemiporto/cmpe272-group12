@@ -26,15 +26,22 @@
      <div id="titleBar"></div>
     </body>
 
-    <body>
+	<body>
         <div>            
 			<div class="container" style="max-width:300px">
-			<h1> <div style="font-weight:bold; text-align:center">Menu</div> </h1>
-			     
+			<h1> <div style="font-weight:bold; text-align:center">Home</div> </h1>		
+			</div>
+			<p></p>
+		</div>
+	</body>
+
+    <body>
+        <div>            
+			<div class="container" style="max-width:300px">			     
 	    		<div class="span12" >    
 					<!--the category section-->
 					<div class="list-group center-block" style="text-align:center">
-						<a href="SelectTablePage.php" data-toggle="modal" class="list-group-item">Add Data</a>
+						<a href="Create Table.php" class="list-group-item">Add Data</a>
 						<a href="SelectTablePage.php" class="list-group-item">View Crowd Source Data</a>					
 					</div>
 				</div>

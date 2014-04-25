@@ -22,13 +22,15 @@ and open the template in the editor.
     <body> 
      <div id="titleBar"></div>
     </body>
-    
-    
-    <body>
-        <div>
-			<h1> <div style="font-weight:bold; text-align:center">Select Table</div> </h1>
-        </div>
-    </body>
+
+	<body>
+        <div>            
+			<div class="container" style="max-width:300px">
+			<h1> <div style="font-weight:bold; text-align:center">Select Table</div> </h1>		
+			</div>
+			<p></p>
+		</div>
+	</body>
     
     <div class="container" style="max-width:600px">     
 	    <div class="span12">      
@@ -70,7 +72,7 @@ and open the template in the editor.
 			<div>
 				<!--the category section-->
 				<div class="list-group center-block" style="text-align:center">
-					<a href="ViewChat.php" data-toggle="modal" class="list-group-item">View</a>			
+					<a href="ViewChat.php" class="list-group-item">View</a>			
 				</div>
 			</div>
 	    </div> 
