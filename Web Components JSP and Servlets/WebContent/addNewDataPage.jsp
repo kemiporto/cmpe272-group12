@@ -44,7 +44,10 @@
 			</div>
 		</form>
 		<div style="text-align: center">
-			<input type="button" value="Upload File" />
+            <form action="UploadFile" method="post" enctype="multipart/form-data">
+                <input type="file" name="file" />
+                <input type="submit" value="Upload File" />
+            </form>
 		</div>
 
 
