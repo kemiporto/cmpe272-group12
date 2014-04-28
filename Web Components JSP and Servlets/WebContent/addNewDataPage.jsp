@@ -35,20 +35,30 @@
 			<div style="text-align: center">
 				y:<input type="text" name="yValue">
 			</div>
+			
 			<div style="text-align: center">
 				x:(date)<input type="text" id="datepicker" name="xValue">
 			</div>
+			
 			<input type="hidden" name="selectedTable" value="<%=tableSelected%>">
+			
 			<div style="text-align: center">
 				<input type="submit" value="Add" />
 			</div>
+			
 		</form>
-		<div style="text-align: center">
-            <form action="UploadFile" method="post" enctype="multipart/form-data">
+		
+        <form action="UploadFile" method="post" enctype="multipart/form-data">
+			<div style="font-weight: bold; text-align: center">
+				OR choose input file to table:
+				<%=tableSelected%></div>
+				
+			<div style="text-align: center">
+ 				<input type="hidden" name="selectedTable" value="<%=tableSelected%>">
                 <input type="file" name="file" />
                 <input type="submit" value="Upload File" />
-            </form>
-		</div>
+			</div>
+    	</form>
 
 
 
