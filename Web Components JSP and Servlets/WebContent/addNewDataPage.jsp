@@ -15,54 +15,8 @@
     </script>
     
     <script src="js/jquery.js"></script>
-    <script> $(function(){ $("#titleBar").load("TitleBar.html"); } ); </script>  
+    <script> $(function(){ $("#titleBar").load("TitleBar.html"); } ); </script>
 
-<body>
-	<%
-		String tableSelected = request.getParameter("selectTable");
-		String selectTableServlet = (String)request.getAttribute("selectTableServlet");
-		if(selectTableServlet !=null){
-			tableSelected = selectTableServlet;
-		}
-		String message = (String)request.getAttribute("Message");
-	%>
-	<% if(message != null) {%>
-	<%= message %>
-	<%}%>
-	<div>
-		<form method="post" action="AddData">
-			<div style="font-weight: bold; text-align: center">
-				Table:
-				<%=tableSelected%></div>
-			<div style="text-align: center">Add Data Point</div>
-
-			<div style="text-align: center">
-				y:<input type="text" name="yValue">
-			</div>
-			
-			<div style="text-align: center">
-				x:(date)<input type="text" id="datepicker" name="xValue">
-			</div>
-			
-			<input type="hidden" name="selectedTable" value="<%=tableSelected%>">
-			
-			<div style="text-align: center">
-				<input type="submit" value="Add" />
-			</div>
-			
-		</form>
-		
-        <form action="UploadFile" method="post" enctype="multipart/form-data">
-			<div style="font-weight: bold; text-align: center">
-				OR choose input file to table:
-				<%=tableSelected%></div>
-				
-			<div style="text-align: center">
- 				<input type="hidden" name="selectedTable" value="<%=tableSelected%>">
-                <input type="file" name="file" />
-                <input type="submit" value="Upload File" />
-			</div>
-    	</form>
     <script type="text/javascript">
         function navigateBack()
         {
@@ -75,7 +29,7 @@
             var navigation = [];
             navigation.push( ["<a class='navbar-brand' href='index.jsp' >Home</a>"] );
             navigation.push( ["<a class='navbar-brand' href='createTable.jsp' >Data Management</a>"] );
-	    navigation.push( ["<a class='navbar-brand' href='addNewDataPage.jsp' >Add Data Point</a>"] );
+navigation.push( ["<a class='navbar-brand' href='addNewDataPage.jsp' >Add Data Point</a>"] );
             return navigation;
         }
     </script>
@@ -102,8 +56,8 @@
                             }
 
                     });
-            });		
-    </script>  
+            });
+    </script>
 </head>
     
 <%@ include file="TitleBar.html" %>
@@ -133,20 +87,33 @@
 
 
 <body>
-    <div>            
-	<div class="container" style="max-width:300px">
-	<h1>
-            <div style="font-weight:bold; text-align:center">Add Data Point</div> 
-        </h1>		
-	</div>
-	<p></p>
+    <div>
+<div class="container" style="max-width:300px">
+<h1>
+            <div style="font-weight:bold; text-align:center">Add Data Point</div>
+        </h1>	
+</div>
+<p></p>
     </div>
 </body>
 
 <body>
-	<div class="container" style="max-width:300px">	     
+    <%
+        String tableSelected = request.getParameter("selectTable");
+String selectTableServlet = (String)request.getAttribute("selectTableServlet");
+if(selectTableServlet !=null)
+        {
+            tableSelected = selectTableServlet;
+}
+        String message = (String)request.getAttribute("Message");
+    %>
+    <% if(message != null){%>
+    <%= message %>
+    <%}%>
+    <div>
+<div class="container" style="max-width:300px">	
             <div class="span12" >
-                <form method="post" action="AddData">  		
+                <form method="post" action="AddData">
                     <div style="text-align:center">
                         <input type="text" id="datepicker" placeholder="x:(date)" style="text-align:center; min-width: 100%;"/>	
                     </div>
@@ -154,24 +121,24 @@
                     <div style="text-align:center">
                         <input type="text" placeholder="y value" style="text-align:center; min-width: 100%;"/>
                     </div>
-                    <div class="list-group center-block" style="text-align:center">			
-                        <button type="submit" value="Add" class="btn btn-success" style="width:270px"><i class="icon-circle-arrow-right icon-large"></i> Add </button>				                            
+                    <div class="list-group center-block" style="text-align:center">	
+                        <button type="submit" value="Add" class="btn btn-success" style="width:270px"><i class="icon-circle-arrow-right icon-large"></i> Add </button>	
                     </div>
                 </form>
-                <hr>		
+                <hr>	
                 <form action="UploadFile" method="post" enctype="multipart/form-data">
-                    <div class="list-group center-block" style="text-align:center">                            
-			<div class="span12">
-				<span class="file-input btn btn-block btn-primary btn-file">
+                    <div class="list-group center-block" style="text-align:center">
+<div class="span12">
+<span class="file-input btn btn-block btn-primary btn-file">
                                         <input type="hidden" name="selectedTable" value="<%=tableSelected%>">
-					Browse&hellip; <input type="file" name="file">
-				</span>
-			</div>
-                        <button type="submit" value="Select Table" class="btn btn-success" style="width:270px"><i class="icon-circle-arrow-right icon-large"></i> Upload File </button>				                                               
+Browse&hellip; <input type="file" name="file">
+</span>
+</div>
+                        <button type="submit" value="Select Table" class="btn btn-success" style="width:270px"><i class="icon-circle-arrow-right icon-large"></i> Upload File </button>	
                     </div>
                 </form>
             </div>
-        </div>        
+        </div>
     </div>
 </body>
     
