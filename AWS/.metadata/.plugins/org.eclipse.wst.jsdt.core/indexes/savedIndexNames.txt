@@ -1,8 +1,0 @@
-INDEX VERSION 1.3+/Users/miteshkatakwar/workspace-sts-3.5.0.RELEASE/AWS/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
-1534859079.index
-2207260035.index
-405946497.index
-1989541354.index
-2083287905.index
-2320092575.index
-4193448694.index
