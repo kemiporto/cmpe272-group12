@@ -1,3 +1,0 @@
-#Tomcat publish data
-#Sat Apr 19 16:53:41 PDT 2014
-org.eclipse.jst.jee.server\:ESPAWSProject=/Users/miteshkatakwar/springsource/vfabric-tc-server-developer-2.9.5.SR1/base-instance/wtpwebapps/ESPAWSProject
