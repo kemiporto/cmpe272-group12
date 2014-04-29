@@ -32,70 +32,7 @@
 <%@ include file="TitleBar.html" %>
 
 <body>
-<form action="SelectTable" method="post"> 
-<center>
-<div style="overflow: hidden;text-align: center;">
-    <%
-    ArrayList  tableNames2 = (ArrayList) request.getAttribute("tableNames");
-    if (tableNames2 != null) {
-        Iterator it = tableNames2.iterator();
-	%>
-	<div style="font-weight: bold; text-align: center;float: left;">
-            Source1<br/>
-
-            <select name="Source1">
-                <%
-                while (it.hasNext()) {
-                    String tableName = (String) it.next();
-                    %>
-
-                    <option value="<%=tableName%>"><%=tableName%></option>
-
-                    <%
-                }
-                %>
-            </select>  
-		
-	</div>
-        <%
-    } else {
-        %>
-	No Tables.Please Create one.
-	<%
-    }
-    %>
-		
-		<%
-			if (tableNames2 != null) {
-				Iterator it = tableNames2.iterator();
-		%>
-		<div style="font-weight: bold; text-align: center;float: left;">
-		 Source2<br/>
-			
-				 <select name="Source2">
-					<%
-						while (it.hasNext()) {
-								String tableName = (String) it.next();
-					%>
-
-					<option value="<%=tableName%>"><%=tableName%></option>
-
-					<%
-						}
-					%>
-				</select>  
-		
-		</div>
-		<%
-			} else {
-		%>
-		No Tables.Please Create one.
-		<%
-			}
-		%>
-
-</div>
-</center>     
+<form action="SelectTable" method="post">    
                 
     <body>
         <div>            
@@ -134,7 +71,7 @@
                             <%
                         } else {
                             %>
-                            No Tables.Please Create one.
+                            No Tables. Please Create one.
                             <%
                         }
                         %>
@@ -157,7 +94,7 @@
                             <%
                         } else {
                             %>
-                            No Tables.Please Create one.
+                            No Tables. Please Create one.
                             <%
                         }
                         %>
