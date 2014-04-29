@@ -39,4 +39,14 @@
     <servlet-name>SelectTableServlet</servlet-name>
     <url-pattern>/SelectTable</url-pattern>
   </servlet-mapping>
+    <servlet>
+    <description></description>
+    <display-name>UploadFileServlet</display-name>
+    <servlet-name>UploadFileServlet</servlet-name>
+    <servlet-class>com.servlet.UploadFileServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UploadFileServlet</servlet-name>
+    <url-pattern>/UploadFile</url-pattern>
+  </servlet-mapping>
 </web-app>
