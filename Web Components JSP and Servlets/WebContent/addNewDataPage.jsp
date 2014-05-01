@@ -9,6 +9,22 @@
 <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
 <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 <script src="js/jquery.js"></script>
+	<script type="text/javascript">
+            function navigateBack()
+	    {
+                window.history.back();
+	    }
+	</script>
+    <script type="text/javascript">
+        function getTitleBarNavigation()
+        {
+            var navigation = [];
+            navigation.push( ["<a class='navbar-brand' href='index.jsp' >Home</a>"] );
+            navigation.push( ["<a class='navbar-brand' href='createTable.jsp' >Data Management</a>"] );
+	    navigation.push( ["<a class='navbar-brand' href='addNewDataPage.jsp' >Add Data Point</a>"] );
+            return navigation;
+        }
+    </script>
 <script>
 	$(function() {
 		$("#datepicker").datepicker();

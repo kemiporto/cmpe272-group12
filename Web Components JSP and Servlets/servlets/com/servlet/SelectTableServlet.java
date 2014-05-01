@@ -47,18 +47,18 @@ public class SelectTableServlet extends HttpServlet {
 			HttpServletResponse response) throws ServletException, IOException {
 		String Source1Table = request.getParameter("Source1");
 		String Source2Table = request.getParameter("Source2");
-		request.setAttribute("source1String", getTableData(Source1Table));
-		request.setAttribute("source2String", getTableData(Source2Table));
+		request.setAttribute("source1String", getTableData(Source1Table, Source1Table));
+		request.setAttribute("source2String", getTableData(Source2Table, Source2Table));
 		request.getRequestDispatcher("viewGraph.jsp")
 				.forward(request, response);
 	}
 
-	private String getTableData(String tableName) throws UnknownHostException {
+	private String getTableData(String tableName, String source) throws UnknownHostException {
 		if (tableName != null && tableName.trim().length() > 0) {
 			DBCollection tableS1 = Util.getMongoDb().getCollection(tableName);
 			DBCursor cursorS1 = tableS1.find();
 			StringBuffer source1String = new StringBuffer(
-					"[ [ 'Year',  'X Value' ]");
+					"[ [ 'Year',  'Y " + source + "' ]");
 			while (cursorS1.hasNext()) {
 				DBObject dbObject = cursorS1.next();
 				source1String.append(",['" + (String) dbObject.get("X") + "',"
