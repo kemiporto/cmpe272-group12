@@ -34,7 +34,6 @@
 	<div class="container" style="max-width: 1000px">
             <div style="font-weight: bold; text-align: center">
                 <div id="chart1_div" style="width: 900px; height: 500px;"></div>
-                <div id="chart2_div" style="width: 900px; height: 500px;"></div>
                 <%
                         String source1String = (String) request
                                         .getAttribute("source1String");
@@ -52,17 +51,47 @@
                         function drawChart1() {
                                 var data1str = document.getElementById("source1String").value;
                                 var data2str = document.getElementById("source2String").value;
-                                var data1 = eval("(" + data1str + ")");
-                                var data2 = eval("(" + data2str + ")");                                
-				var dataTable1 = google.visualization.arrayToDataTable(data1);
-                                var dataTable2 = google.visualization.arrayToDataTable(data2);
-                                var dataJoin = google.visualization.data.join(dataTable1, dataTable2, 'full', [[0,0]], [1], [1]);
-                                var options = {
-                                        title : 'Source'
-                                };
-                                var chart = new google.visualization.LineChart(document
-                                                .getElementById('chart1_div'));
-                                chart.draw(dataJoin, options);
+                                if( data1str != "" && data2str != "" )
+                                {
+                                    var data1 = eval("(" + data1str + ")");
+                                    var data2 = eval("(" + data2str + ")");
+                                    var dataTable1 = google.visualization.arrayToDataTable(data1);                                
+                                    var dataTable2 = google.visualization.arrayToDataTable(data2);
+                                    var dataJoin = google.visualization.data.join(dataTable1, dataTable2, 'full', [[0,0]], [1], [1]);
+                                    var options = {
+                                            title : 'Source'
+                                    };
+                                    var chart = new google.visualization.LineChart(document.getElementById('chart1_div'));
+                                    chart.draw(dataJoin, options);
+                                }
+                                else if( data1str != "" )
+                                {
+                                    var data1 = eval("(" + data1str + ")");
+                                    var dataTable1 = google.visualization.arrayToDataTable(data1);
+                                    var options = {
+                                            title : 'Source'
+                                    };
+                                    var chart = new google.visualization.LineChart(document
+                                                    .getElementById('chart1_div'));
+                                    chart.draw(dataTable1, options);
+                                    document.getElementById('chart2_div').style.display='none';
+                                }
+                                else if( data2str != "" )
+                                {
+                                    var data1 = eval("(" + data2str + ")");
+                                    var dataTable1 = google.visualization.arrayToDataTable(data1);
+                                    var options = {
+                                            title : 'Source'
+                                    };
+                                    var chart = new google.visualization.LineChart(document
+                                                    .getElementById('chart1_div'));
+                                    chart.draw(dataTable1, options);
+                                    document.getElementById('chart2_div').style.display='none';
+                                }
+                                else
+                                {
+                                    document.getElementById('chart1_div').style.display='none';
+                                }
                         }
                 </script>
             </div>

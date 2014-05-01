@@ -7,7 +7,6 @@
         <link href="./css/bootstrap.css" rel="stylesheet">
         <title>Create Table</title>
 	<script src="js/jquery.js"></script>
-	<script> $(function(){ $("#titleBar").load("TitleBar.html"); } ); </script>  
 	
 	<script type="text/javascript">
             function navigateBack()
@@ -20,10 +19,11 @@
 	    {
 	        var navigation = [];
 	        navigation.push( ["<a class='navbar-brand' href='index.jsp' >Home</a>"] );
-	        navigation.push( ["<a class='navbar-brand' href='createTable.jsp' >Data Management</a>"] );
+	        navigation.push( ["<a class='navbar-brand' href='createTable.jsp' javascript: submitform()>Data Management</a> "] );
                 return navigation;
 	    }
         </script>
+        
     </head>
     
 <body>

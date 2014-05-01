@@ -2,7 +2,6 @@
     <link href="./css/bootstrap.css" rel="stylesheet">
     <head>
     	<script src="js/jquery.js"></script>
-    	<script> $(function(){ $("#titleBar").load("TitleBar.html"); } ); </script>  
         <script type="text/javascript">
             function navigateBack()
             {
