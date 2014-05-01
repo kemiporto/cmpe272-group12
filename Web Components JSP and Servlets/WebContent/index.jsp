@@ -23,6 +23,9 @@
 		<div style="float:left;">
 			<img src="<%=request.getContextPath()%>/images/images.jpg" style="max-width: 400px;" />
 		</div>
+		<div style="float:left; margin-left:30px;">
+			<img src="<%=request.getContextPath()%>/images/watersaving.jpg" style="max-width: 400px;" />
+		</div>	
 	</div>
 </body>
 </html>
