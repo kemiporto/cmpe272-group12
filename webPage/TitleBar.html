@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>Homepage</title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    </head>
+    
+	<!-- NAVIGATION BAR -->
+		<nav class="navbar navbar-default" role="navigation">
+		  <div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					</button>
+					<div id="navigationTab">					
+					<a class="navbar-brand" href="javascript:navigateBack();"> <img src="icons/UpArrow.png" /></a>
+					</div>
+					<script type="text/javascript">
+						var newNavigationTab = "<a class='navbar-brand' href='javascript:navigateBack();'> <img src='icons/UpArrow.png' /></a>";
+						var newTab = getTitleBarNavigation();
+						for( var i=0; i < newTab.length; i++)
+						{
+							newNavigationTab = newNavigationTab + newTab[i];
+						}
+						document.getElementById("navigationTab").innerHTML = newNavigationTab;
+					</script>
+				</div>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse navbar-ex1-collapse">
+					<dl class="nav navbar-nav pull-right">
+						<li><a href="homepage.php">CSDC (Crowd Source Data Collection)</a> </li>
+					</dl>
+				</div><!-- /.navbar-collapse -->
+	  	</div><!-- /.container -->
+		</nav>
+</html>
