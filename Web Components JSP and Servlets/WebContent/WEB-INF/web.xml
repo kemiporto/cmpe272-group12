@@ -39,7 +39,7 @@
     <servlet-name>SelectTableServlet</servlet-name>
     <url-pattern>/SelectTable</url-pattern>
   </servlet-mapping>
-  <servlet>
+    <servlet>
     <description></description>
     <display-name>UploadFileServlet</display-name>
     <servlet-name>UploadFileServlet</servlet-name>
