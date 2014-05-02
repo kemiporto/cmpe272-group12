@@ -73,8 +73,6 @@
                                        var newArray = [ date, data2[i][1] ];                                       
                                        data2Parsed.push( newArray ); 
                                     }
-                                    console.log( data1Parsed );
-                                    console.log( data2Parsed );
                                     var dataTable1 = google.visualization.arrayToDataTable(data1Parsed);                                
                                     var dataTable2 = google.visualization.arrayToDataTable(data2Parsed);
                                     var dataJoin = google.visualization.data.join(dataTable1, dataTable2, 'full', [[0,0]], [1], [1]);
