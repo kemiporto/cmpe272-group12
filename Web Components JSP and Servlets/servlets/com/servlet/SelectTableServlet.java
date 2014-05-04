@@ -57,8 +57,13 @@ public class SelectTableServlet extends HttpServlet {
 		if (tableName != null && tableName.trim().length() > 0) {
 			DBCollection tableS1 = Util.getMongoDb().getCollection(tableName);
 			DBCursor cursorS1 = tableS1.find();
-			StringBuffer source1String = new StringBuffer(
-					"[ [ 'Year',  'Y " + source + "' ]");
+			StringBuffer source1String = new StringBuffer( "[" );
+			if( cursorS1.hasNext() )
+			{
+				DBObject dbObject = cursorS1.next();
+				source1String.append(" ['" + (String) dbObject.get("X") + "','"
+						+ (String) dbObject.get("Y") + "']");
+			}
 			while (cursorS1.hasNext()) {
 				DBObject dbObject = cursorS1.next();
 				source1String.append(",['" + (String) dbObject.get("X") + "',"

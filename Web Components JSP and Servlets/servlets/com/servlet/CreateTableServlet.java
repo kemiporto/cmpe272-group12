@@ -8,7 +8,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.db.util.Util;
+import com.mongodb.BasicDBObject;
 import com.mongodb.BasicDBObjectBuilder;
+import com.mongodb.DBCollection;
 import com.mongodb.DBObject;
 
 /**
@@ -37,7 +39,8 @@ public class CreateTableServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String createTableName = request.getParameter("createTableText");
+		String createTableName = request.getParameter("createTableName");
+		String createTableX = request.getParameter("createTableX");
 		try{
 			boolean createTable = true;
 			for(String name : Util.getMongoDb().getCollectionNames()){
@@ -47,8 +50,16 @@ public class CreateTableServlet extends HttpServlet {
 			}
 			if(createTable){
 				System.out.println("creating table");
-				DBObject options = BasicDBObjectBuilder.start().add("capped", true).add("size", 2000000000l).get();
-				Util.getMongoDb().createCollection(createTableName, options);
+				DBObject options = BasicDBObjectBuilder.start().add("capped", true).add("size", 2000000000l).get();				
+				DBCollection table = Util.getMongoDb().createCollection(createTableName, options); 
+				BasicDBObject document = new BasicDBObject();
+				if( createTableX.isEmpty() )
+				{
+					createTableX = "Date";
+				}
+				document.put("X", createTableX);
+				document.put("Y", "Value");
+				table.insert(document);
 			}else{
 				request.setAttribute("message", "Table Already Exists");
 			}
