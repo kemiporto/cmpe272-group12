@@ -55,26 +55,8 @@
                                 {
                                     var data1 = eval("(" + data1str + ")");
                                     var data2 = eval("(" + data2str + ")");
-                                    var data1Parsed = []; 
-                                    data1Parsed.push( data1[0] );
-                                    for( var i = 1; i < data1.length; i++ )
-                                    {
-                                       var dateSplit = data1[i][0].split('/');
-                                       var date = "" + dateSplit[2] + "/" + dateSplit[0] + "/" + dateSplit[1];
-                                       var newArray = [ date, data1[i][1] ];
-                                       data1Parsed.push( newArray ); 
-                                    }
-                                    var data2Parsed = [];
-                                    data2Parsed.push( data2[0] );
-                                    for( var i = 1; i < data2.length; i++ )
-                                    {
-                                       var dateSplit = data2[i][0].split('/');
-                                       var date = "" + dateSplit[2] + "/" + dateSplit[0] + "/" + dateSplit[1];
-                                       var newArray = [ date, data2[i][1] ];                                       
-                                       data2Parsed.push( newArray ); 
-                                    }
-                                    var dataTable1 = google.visualization.arrayToDataTable(data1Parsed);                                
-                                    var dataTable2 = google.visualization.arrayToDataTable(data2Parsed);
+                                    var dataTable1 = google.visualization.arrayToDataTable(data1);                                
+                                    var dataTable2 = google.visualization.arrayToDataTable(data2);
                                     var dataJoin = google.visualization.data.join(dataTable1, dataTable2, 'full', [[0,0]], [1], [1]);
                                     var options = {
                                             title : 'Source'
