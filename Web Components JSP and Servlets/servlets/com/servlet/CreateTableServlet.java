@@ -57,8 +57,8 @@ public class CreateTableServlet extends HttpServlet {
 				{
 					createTableX = "Date";
 				}
-				document.put("X", createTableX);
-				document.put("Y", "Value");
+				document.put("_id", createTableX);
+				document.put("value", "Value");
 				table.insert(document);
 			}else{
 				request.setAttribute("message", "Table Already Exists");

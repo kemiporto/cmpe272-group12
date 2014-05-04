@@ -43,8 +43,8 @@ public class AddDataServlet extends HttpServlet {
 		
 		DBCollection table = Util.getMongoDb().getCollection(selectedTable);
 		BasicDBObject document = new BasicDBObject();
-		document.put("X", xValue);
-		document.put("Y", yValue);
+		document.put("_id", xValue);
+		document.put("value", yValue);
 		table.insert(document);
 		
 		request.setAttribute("Message", "Saved.");

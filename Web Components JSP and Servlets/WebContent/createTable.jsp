@@ -32,8 +32,13 @@
 		<div class="span12">
 			<form action="CreateTable" method="post">
 				<div style="text-align: center">
-					<input name="createTableText" type="text"
+					<input name="createTableName" type="text"
 						placeholder="Type table name"
+						style="text-align: center; min-width: 100%;" />
+				</div>
+				<div style="text-align: center">
+					<input name="createTableX" type="text"
+						placeholder="Type data description"
 						style="text-align: center; min-width: 100%;" />
 				</div>
 				<div class="list-group center-block" style="text-align: center">

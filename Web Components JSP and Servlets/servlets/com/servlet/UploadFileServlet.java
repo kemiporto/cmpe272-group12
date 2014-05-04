@@ -56,8 +56,8 @@ public class UploadFileServlet extends HttpServlet {
 			/**** Insert ****/
 			// create a document to store key and value
 			BasicDBObject document = new BasicDBObject();
-			document.put("X", singleData[0]);
-			document.put("Y", singleData[1]);
+			document.put("_id", singleData[0]);
+			document.put("value", singleData[1]);
 			table.insert(document);
 
 		}
