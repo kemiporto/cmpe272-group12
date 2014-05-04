@@ -1,81 +1,79 @@
-14/05/03 16:40:20 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
-14/05/03 16:40:20 INFO water.Water: Setting up and running MapReduce job in foreground, will wait for results.  {Verbose? true}
-14/05/03 16:40:20 INFO Configuration.deprecation: session.id is deprecated. Instead, use dfs.metrics.session-id
-14/05/03 16:40:20 INFO jvm.JvmMetrics: Initializing JVM Metrics with processName=JobTracker, sessionId=
-14/05/03 16:40:20 WARN mapreduce.JobSubmitter: No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
-14/05/03 16:40:24 INFO splitter.StandaloneMongoSplitter: Running splitvector to check splits against mongodb://localhost:27017/mongo_hadoop.sac_index_2_condition.in
-14/05/03 16:40:25 WARN splitter.StandaloneMongoSplitter: WARNING: No Input Splits were calculated by the split code. Proceeding with a *single* split. Data may be too small, try lowering 'mongo.input.split_size' if this is undesirable.
-14/05/03 16:40:25 INFO splitter.MongoCollectionSplitter: Created split: min=null, max= null
-14/05/03 16:40:26 INFO mapreduce.JobSubmitter: number of splits:1
-14/05/03 16:40:26 INFO Configuration.deprecation: user.name is deprecated. Instead, use mapreduce.job.user.name
-14/05/03 16:40:26 INFO Configuration.deprecation: mapred.output.value.class is deprecated. Instead, use mapreduce.job.output.value.class
-14/05/03 16:40:26 INFO Configuration.deprecation: mapreduce.map.class is deprecated. Instead, use mapreduce.job.map.class
-14/05/03 16:40:26 INFO Configuration.deprecation: mapred.job.name is deprecated. Instead, use mapreduce.job.name
-14/05/03 16:40:26 INFO Configuration.deprecation: mapreduce.reduce.class is deprecated. Instead, use mapreduce.job.reduce.class
-14/05/03 16:40:26 INFO Configuration.deprecation: mapreduce.inputformat.class is deprecated. Instead, use mapreduce.job.inputformat.class
-14/05/03 16:40:26 INFO Configuration.deprecation: mapreduce.outputformat.class is deprecated. Instead, use mapreduce.job.outputformat.class
-14/05/03 16:40:26 INFO Configuration.deprecation: mapred.map.tasks is deprecated. Instead, use mapreduce.job.maps
-14/05/03 16:40:26 INFO Configuration.deprecation: mapred.output.key.class is deprecated. Instead, use mapreduce.job.output.key.class
-14/05/03 16:40:26 INFO Configuration.deprecation: mapred.working.dir is deprecated. Instead, use mapreduce.job.working.dir
-14/05/03 16:40:26 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_local979106346_0001
-14/05/03 16:40:26 WARN conf.Configuration: file:/tmp/hadoop-dpham/mapred/staging/dpham979106346/.staging/job_local979106346_0001/job.xml:an attempt to override final parameter: mapreduce.job.end-notification.max.retry.interval;  Ignoring.
-14/05/03 16:40:26 WARN conf.Configuration: file:/tmp/hadoop-dpham/mapred/staging/dpham979106346/.staging/job_local979106346_0001/job.xml:an attempt to override final parameter: mapreduce.job.end-notification.max.attempts;  Ignoring.
-14/05/03 16:40:27 WARN conf.Configuration: file:/tmp/hadoop-dpham/mapred/local/localRunner/dpham/job_local979106346_0001/job_local979106346_0001.xml:an attempt to override final parameter: mapreduce.job.end-notification.max.retry.interval;  Ignoring.
-14/05/03 16:40:27 WARN conf.Configuration: file:/tmp/hadoop-dpham/mapred/local/localRunner/dpham/job_local979106346_0001/job_local979106346_0001.xml:an attempt to override final parameter: mapreduce.job.end-notification.max.attempts;  Ignoring.
-14/05/03 16:40:27 INFO mapreduce.Job: The url to track the job: http://localhost:8080/
-14/05/03 16:40:27 INFO mapreduce.Job: Running job: job_local979106346_0001
-14/05/03 16:40:27 INFO mapred.LocalJobRunner: OutputCommitter set in config null
-14/05/03 16:40:27 INFO mapred.LocalJobRunner: OutputCommitter is com.mongodb.hadoop.output.MongoOutputCommitter
-14/05/03 16:40:27 INFO output.MongoOutputCommitter: Setting up job.
-14/05/03 16:40:27 INFO mapred.LocalJobRunner: Waiting for map tasks
-14/05/03 16:40:27 INFO mapred.LocalJobRunner: Starting task: attempt_local979106346_0001_m_000000_0
-14/05/03 16:40:27 INFO output.MongoOutputCommitter: Setting up task.
-14/05/03 16:40:27 INFO mapred.Task:  Using ResourceCalculatorProcessTree : [ ]
-14/05/03 16:40:27 INFO mapred.MapTask: Processing split: MongoInputSplit{URI=mongodb://localhost:27017/mongo_hadoop.sac_index_2_condition.in, authURI=null, min={ }, max={ }, query={ }, sort={ }, fields={ }, notimeout=false}
-14/05/03 16:40:27 INFO mapred.MapTask: Map output collector class = org.apache.hadoop.mapred.MapTask$MapOutputBuffer
-14/05/03 16:40:28 INFO mapreduce.Job: Job job_local979106346_0001 running in uber mode : false
-14/05/03 16:40:28 INFO mapreduce.Job:  map 0% reduce 0%
-14/05/03 16:41:09 INFO mapred.MapTask: (EQUATOR) 0 kvi 26214396(104857584)
-14/05/03 16:41:09 INFO mapred.MapTask: mapreduce.task.io.sort.mb: 100
-14/05/03 16:41:09 INFO mapred.MapTask: soft limit at 83886080
-14/05/03 16:41:09 INFO mapred.MapTask: bufstart = 0; bufvoid = 104857600
-14/05/03 16:41:09 INFO mapred.MapTask: kvstart = 26214396; length = 6553600
-14/05/03 16:41:09 INFO input.MongoRecordReader: Read 107.0 documents from:
-14/05/03 16:41:09 INFO input.MongoRecordReader: MongoInputSplit{URI=mongodb://localhost:27017/mongo_hadoop.sac_index_2_condition.in, authURI=null, min={ }, max={ }, query={ }, sort={ }, fields={ }, notimeout=false}
-14/05/03 16:41:09 INFO mapred.LocalJobRunner: 
-14/05/03 16:41:09 INFO mapred.MapTask: Starting flush of map output
-14/05/03 16:41:09 INFO mapred.MapTask: Spilling map output
-14/05/03 16:41:09 INFO mapred.MapTask: bufstart = 0; bufend = 1391; bufvoid = 104857600
-14/05/03 16:41:09 INFO mapred.MapTask: kvstart = 26214396(104857584); kvend = 26213972(104855888); length = 425/6553600
-14/05/03 16:41:09 INFO mapred.MapTask: Finished spill 0
-14/05/03 16:41:09 INFO mapred.Task: Task:attempt_local979106346_0001_m_000000_0 is done. And is in the process of committing
-14/05/03 16:41:09 INFO mapred.LocalJobRunner: 
-14/05/03 16:41:09 INFO mapred.Task: Task attempt_local979106346_0001_m_000000_0 is allowed to commit now
-14/05/03 16:41:09 INFO output.MongoOutputCommitter: Committing task.
-14/05/03 16:41:09 INFO mapred.LocalJobRunner: map
-14/05/03 16:41:09 INFO mapred.Task: Task 'attempt_local979106346_0001_m_000000_0' done.
-14/05/03 16:41:09 INFO mapred.LocalJobRunner: Finishing task: attempt_local979106346_0001_m_000000_0
-14/05/03 16:41:09 INFO mapred.LocalJobRunner: Map task executor complete.
-14/05/03 16:41:10 INFO output.MongoOutputCommitter: Setting up task.
-14/05/03 16:41:10 INFO mapred.Task:  Using ResourceCalculatorProcessTree : [ ]
-14/05/03 16:41:10 INFO mapred.Merger: Merging 1 sorted segments
-14/05/03 16:41:10 INFO mapred.Merger: Down to the last merge-pass, with 1 segments left of total size: 1600 bytes
-14/05/03 16:41:10 INFO mapred.LocalJobRunner: 
-14/05/03 16:41:10 INFO Configuration.deprecation: mapred.skip.on is deprecated. Instead, use mapreduce.job.skiprecords
-14/05/03 16:41:10 INFO mapreduce.Job:  map 100% reduce 0%
-14/05/03 16:41:10 INFO mapred.Task: Task:attempt_local979106346_0001_r_000000_0 is done. And is in the process of committing
-14/05/03 16:41:10 INFO mapred.LocalJobRunner: 
-14/05/03 16:41:10 INFO mapred.Task: Task attempt_local979106346_0001_r_000000_0 is allowed to commit now
-14/05/03 16:41:10 INFO output.MongoOutputCommitter: Committing task.
-14/05/03 16:41:10 INFO mapred.LocalJobRunner: reduce > reduce
-14/05/03 16:41:10 INFO mapred.Task: Task 'attempt_local979106346_0001_r_000000_0' done.
-14/05/03 16:41:10 INFO output.MongoOutputCommitter: Cleaning up job.
-14/05/03 16:41:11 INFO mapreduce.Job:  map 100% reduce 100%
-14/05/03 16:41:11 INFO mapreduce.Job: Job job_local979106346_0001 completed successfully
-14/05/03 16:41:11 INFO mapreduce.Job: Counters: 32
+14/05/03 23:23:05 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+14/05/03 23:23:05 INFO water.Water: Setting up and running MapReduce job in foreground, will wait for results.  {Verbose? true}
+14/05/03 23:23:05 INFO Configuration.deprecation: session.id is deprecated. Instead, use dfs.metrics.session-id
+14/05/03 23:23:05 INFO jvm.JvmMetrics: Initializing JVM Metrics with processName=JobTracker, sessionId=
+14/05/03 23:23:05 WARN mapreduce.JobSubmitter: No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+14/05/03 23:23:05 INFO splitter.StandaloneMongoSplitter: Running splitvector to check splits against mongodb://localhost:27017/mongo_hadoop.sac_index_2_condition.in
+14/05/03 23:23:05 WARN splitter.StandaloneMongoSplitter: WARNING: No Input Splits were calculated by the split code. Proceeding with a *single* split. Data may be too small, try lowering 'mongo.input.split_size' if this is undesirable.
+14/05/03 23:23:05 INFO splitter.MongoCollectionSplitter: Created split: min=null, max= null
+14/05/03 23:23:05 INFO mapreduce.JobSubmitter: number of splits:1
+14/05/03 23:23:05 INFO Configuration.deprecation: user.name is deprecated. Instead, use mapreduce.job.user.name
+14/05/03 23:23:05 INFO Configuration.deprecation: mapred.output.value.class is deprecated. Instead, use mapreduce.job.output.value.class
+14/05/03 23:23:05 INFO Configuration.deprecation: mapreduce.map.class is deprecated. Instead, use mapreduce.job.map.class
+14/05/03 23:23:05 INFO Configuration.deprecation: mapred.job.name is deprecated. Instead, use mapreduce.job.name
+14/05/03 23:23:05 INFO Configuration.deprecation: mapreduce.reduce.class is deprecated. Instead, use mapreduce.job.reduce.class
+14/05/03 23:23:05 INFO Configuration.deprecation: mapreduce.inputformat.class is deprecated. Instead, use mapreduce.job.inputformat.class
+14/05/03 23:23:05 INFO Configuration.deprecation: mapreduce.outputformat.class is deprecated. Instead, use mapreduce.job.outputformat.class
+14/05/03 23:23:05 INFO Configuration.deprecation: mapred.map.tasks is deprecated. Instead, use mapreduce.job.maps
+14/05/03 23:23:05 INFO Configuration.deprecation: mapred.output.key.class is deprecated. Instead, use mapreduce.job.output.key.class
+14/05/03 23:23:05 INFO Configuration.deprecation: mapred.working.dir is deprecated. Instead, use mapreduce.job.working.dir
+14/05/03 23:23:05 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_local1991937478_0001
+14/05/03 23:23:05 WARN conf.Configuration: file:/tmp/hadoop-dpham/mapred/staging/dpham1991937478/.staging/job_local1991937478_0001/job.xml:an attempt to override final parameter: mapreduce.job.end-notification.max.retry.interval;  Ignoring.
+14/05/03 23:23:05 WARN conf.Configuration: file:/tmp/hadoop-dpham/mapred/staging/dpham1991937478/.staging/job_local1991937478_0001/job.xml:an attempt to override final parameter: mapreduce.job.end-notification.max.attempts;  Ignoring.
+14/05/03 23:23:06 WARN conf.Configuration: file:/tmp/hadoop-dpham/mapred/local/localRunner/dpham/job_local1991937478_0001/job_local1991937478_0001.xml:an attempt to override final parameter: mapreduce.job.end-notification.max.retry.interval;  Ignoring.
+14/05/03 23:23:06 WARN conf.Configuration: file:/tmp/hadoop-dpham/mapred/local/localRunner/dpham/job_local1991937478_0001/job_local1991937478_0001.xml:an attempt to override final parameter: mapreduce.job.end-notification.max.attempts;  Ignoring.
+14/05/03 23:23:06 INFO mapreduce.Job: The url to track the job: http://localhost:8080/
+14/05/03 23:23:06 INFO mapreduce.Job: Running job: job_local1991937478_0001
+14/05/03 23:23:06 INFO mapred.LocalJobRunner: OutputCommitter set in config null
+14/05/03 23:23:06 INFO mapred.LocalJobRunner: OutputCommitter is com.mongodb.hadoop.output.MongoOutputCommitter
+14/05/03 23:23:06 INFO output.MongoOutputCommitter: Setting up job.
+14/05/03 23:23:06 INFO mapred.LocalJobRunner: Waiting for map tasks
+14/05/03 23:23:06 INFO mapred.LocalJobRunner: Starting task: attempt_local1991937478_0001_m_000000_0
+14/05/03 23:23:06 INFO output.MongoOutputCommitter: Setting up task.
+14/05/03 23:23:06 INFO mapred.Task:  Using ResourceCalculatorProcessTree : [ ]
+14/05/03 23:23:06 INFO mapred.MapTask: Processing split: MongoInputSplit{URI=mongodb://localhost:27017/mongo_hadoop.sac_index_2_condition.in, authURI=null, min={ }, max={ }, query={ }, sort={ }, fields={ }, notimeout=false}
+14/05/03 23:23:06 INFO mapred.MapTask: Map output collector class = org.apache.hadoop.mapred.MapTask$MapOutputBuffer
+14/05/03 23:23:06 INFO mapred.MapTask: (EQUATOR) 0 kvi 26214396(104857584)
+14/05/03 23:23:06 INFO mapred.MapTask: mapreduce.task.io.sort.mb: 100
+14/05/03 23:23:06 INFO mapred.MapTask: soft limit at 83886080
+14/05/03 23:23:06 INFO mapred.MapTask: bufstart = 0; bufvoid = 104857600
+14/05/03 23:23:06 INFO mapred.MapTask: kvstart = 26214396; length = 6553600
+14/05/03 23:23:06 INFO input.MongoRecordReader: Read 107.0 documents from:
+14/05/03 23:23:06 INFO input.MongoRecordReader: MongoInputSplit{URI=mongodb://localhost:27017/mongo_hadoop.sac_index_2_condition.in, authURI=null, min={ }, max={ }, query={ }, sort={ }, fields={ }, notimeout=false}
+14/05/03 23:23:06 INFO mapred.LocalJobRunner: 
+14/05/03 23:23:06 INFO mapred.MapTask: Starting flush of map output
+14/05/03 23:23:06 INFO mapred.MapTask: Spilling map output
+14/05/03 23:23:06 INFO mapred.MapTask: bufstart = 0; bufend = 1391; bufvoid = 104857600
+14/05/03 23:23:06 INFO mapred.MapTask: kvstart = 26214396(104857584); kvend = 26213972(104855888); length = 425/6553600
+14/05/03 23:23:06 INFO mapred.MapTask: Finished spill 0
+14/05/03 23:23:06 INFO mapred.Task: Task:attempt_local1991937478_0001_m_000000_0 is done. And is in the process of committing
+14/05/03 23:23:06 INFO mapred.LocalJobRunner: 
+14/05/03 23:23:06 INFO mapred.Task: Task attempt_local1991937478_0001_m_000000_0 is allowed to commit now
+14/05/03 23:23:06 INFO output.MongoOutputCommitter: Committing task.
+14/05/03 23:23:06 INFO mapred.LocalJobRunner: map
+14/05/03 23:23:06 INFO mapred.Task: Task 'attempt_local1991937478_0001_m_000000_0' done.
+14/05/03 23:23:06 INFO mapred.LocalJobRunner: Finishing task: attempt_local1991937478_0001_m_000000_0
+14/05/03 23:23:06 INFO mapred.LocalJobRunner: Map task executor complete.
+14/05/03 23:23:06 INFO output.MongoOutputCommitter: Setting up task.
+14/05/03 23:23:06 INFO mapred.Task:  Using ResourceCalculatorProcessTree : [ ]
+14/05/03 23:23:06 INFO mapred.Merger: Merging 1 sorted segments
+14/05/03 23:23:06 INFO mapred.Merger: Down to the last merge-pass, with 1 segments left of total size: 1600 bytes
+14/05/03 23:23:06 INFO mapred.LocalJobRunner: 
+14/05/03 23:23:06 INFO Configuration.deprecation: mapred.skip.on is deprecated. Instead, use mapreduce.job.skiprecords
+14/05/03 23:23:06 INFO mapred.Task: Task:attempt_local1991937478_0001_r_000000_0 is done. And is in the process of committing
+14/05/03 23:23:06 INFO mapred.LocalJobRunner: 
+14/05/03 23:23:06 INFO mapred.Task: Task attempt_local1991937478_0001_r_000000_0 is allowed to commit now
+14/05/03 23:23:06 INFO output.MongoOutputCommitter: Committing task.
+14/05/03 23:23:06 INFO mapred.LocalJobRunner: reduce > reduce
+14/05/03 23:23:06 INFO mapred.Task: Task 'attempt_local1991937478_0001_r_000000_0' done.
+14/05/03 23:23:06 INFO output.MongoOutputCommitter: Cleaning up job.
+14/05/03 23:23:07 INFO mapreduce.Job: Job job_local1991937478_0001 running in uber mode : false
+14/05/03 23:23:07 INFO mapreduce.Job:  map 100% reduce 100%
+14/05/03 23:23:07 INFO mapreduce.Job: Job job_local1991937478_0001 completed successfully
+14/05/03 23:23:07 INFO mapreduce.Job: Counters: 32
 	File System Counters
 		FILE: Number of bytes read=2185
-		FILE: Number of bytes written=380808
+		FILE: Number of bytes written=382832
 		FILE: Number of read operations=0
 		FILE: Number of large read operations=0
 		FILE: Number of write operations=0
@@ -104,7 +102,7 @@
 		CPU time spent (ms)=0
 		Physical memory (bytes) snapshot=0
 		Virtual memory (bytes) snapshot=0
-		Total committed heap usage (bytes)=436207616
+		Total committed heap usage (bytes)=442499072
 	File Input Format Counters 
 		Bytes Read=0
 	File Output Format Counters 
