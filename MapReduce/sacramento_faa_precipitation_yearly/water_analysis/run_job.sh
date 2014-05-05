@@ -3,8 +3,8 @@
 ###########Environment settings#############
 # Modify these to match your setup.
 #export HADOOP_HOME="/Users/mike/hadoop/hadoop-1.1.2" 
-INPUT_URI="mongodb://localhost:27017/mongo_hadoop.sac_index_2_condition.in"
-OUTPUT_URI="mongodb://localhost:27017/mongo_hadoop.sac_index_2_condition.out"
+INPUT_URI="mongodb://localhost:27017/mongo_hadoop.sac_faa_yearly.in"
+OUTPUT_URI="mongodb://localhost:27017/mongo_hadoop.sac_faa_yearly.out"
 JARNAME="sac_condition_2.2.0-1.2.0.jar"
 
 HERE="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
