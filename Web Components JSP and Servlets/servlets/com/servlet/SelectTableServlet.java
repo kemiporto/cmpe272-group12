@@ -51,8 +51,8 @@ public class SelectTableServlet extends HttpServlet {
 			if( cursorSource1.hasNext() )
 			{
 				DBObject dbObject = cursorSource1.next();
-                                StringX = (String)dbObject.get("_id");
-                                StringY = (String)dbObject.get("value");
+                                StringX = dbObject.get("_id").toString();
+                                StringY = dbObject.get("value").toString();
 			}                                        
                         
 			DBCollection tableS2 = Util.getMongoDb().getCollection("TableCollections");
@@ -61,8 +61,8 @@ public class SelectTableServlet extends HttpServlet {
 			while (cursorS2.hasNext()) {                            
                             System.out.println("Finding table");
                             DBObject dbObject = cursorS2.next();
-                            String tableX = (String)dbObject.get("value");
-                            String tableName = (String)dbObject.get("_id");
+                            String tableX = dbObject.get("value").toString();
+                            String tableName = dbObject.get("_id").toString();
                             DBCollection tableS3 = Util.getMongoDb().getCollection(tableName);                            
                             if( !Source1Table.equals(tableName) && StringX.equals(tableX) && tableS3.count() > 1 )
                             {
