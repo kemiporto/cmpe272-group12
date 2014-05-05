@@ -50,7 +50,7 @@ public class CreateTableServlet extends HttpServlet {
 			}
 			if(createTable){
 				System.out.println("creating table");
-				DBObject options = BasicDBObjectBuilder.start().add("capped", true).add("size", 2000000000l).get();				
+				DBObject options = BasicDBObjectBuilder.start().get();				
 				DBCollection table = Util.getMongoDb().createCollection(createTableName, options); 
 				BasicDBObject document = new BasicDBObject();
 				if( createTableX.isEmpty() )
