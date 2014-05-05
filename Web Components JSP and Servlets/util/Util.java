@@ -36,7 +36,7 @@ public class Util {
 	
 	public static DB getMongoDb() throws UnknownHostException{
 		MongoClient mongo = new MongoClient("localhost", 27017);
-		DB db = mongo.getDB("espawsdb");
+		DB db = mongo.getDB("mongo_hadoop");
 		return db;
 	}
 }
