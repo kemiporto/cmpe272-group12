@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.net.UnknownHostException;
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.Set;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -51,8 +52,12 @@ public class SelectTableServlet extends HttpServlet {
 			if( cursorSource1.hasNext() )
 			{
 				DBObject dbObject = cursorSource1.next();
-                                StringX = dbObject.get("_id").toString();
-                                StringY = dbObject.get("value").toString();
+                                Set<String> stringSet = dbObject.keySet();
+                                Iterator it = stringSet.iterator();
+                                String StringKeyX = (String) it.next();
+                                String StringKeyY = (String) it.next();
+                                StringX = dbObject.get(StringKeyX).toString();
+                                StringY = dbObject.get(StringKeyY).toString();
 			}                                        
                         
 			DBCollection tableS2 = Util.getMongoDb().getCollection("TableCollections");
@@ -61,8 +66,12 @@ public class SelectTableServlet extends HttpServlet {
 			while (cursorS2.hasNext()) {                            
                             System.out.println("Finding table");
                             DBObject dbObject = cursorS2.next();
-                            String tableX = dbObject.get("value").toString();
-                            String tableName = dbObject.get("_id").toString();
+                            Set<String> stringSet = dbObject.keySet();
+                            Iterator it = stringSet.iterator();
+                            String StringKeyX = (String) it.next();
+                            String StringKeyY = (String) it.next();
+                            String tableX = dbObject.get(StringKeyY).toString();
+                            String tableName = dbObject.get(StringKeyX).toString();
                             DBCollection tableS3 = Util.getMongoDb().getCollection(tableName);                            
                             if( !Source1Table.equals(tableName) && StringX.equals(tableX) && tableS3.count() > 1 )
                             {
