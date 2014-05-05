@@ -10,7 +10,6 @@
     <title>Insert title here</title>
 
     <script src="js/jquery.js"></script>
-    <script> $(function(){ $("#titleBar").load("TitleBar.html"); } ); </script>  
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     <script type="text/javascript">
         function navigateBack()
@@ -26,12 +25,26 @@
                 navigation.push( ["<a class='navbar-brand' href='selectTable.jsp' >Select Table</a>"] );
                 return navigation;
             }
+            
+
+            function changeFunc() {
+                var selectBox = document.getElementById("selectBox");
+                var selectedValue = selectBox.options[selectBox.selectedIndex].value;                
+            }
         </script>  
+    
+            <script>
+            function DoPush()
+            {
+               //formName is the name of your form, submitType is the name of the submit button.
+               document.forms["SelectTable"].ViewGraph.value = "ViewGraph";
+            }
+            </script>
 </head>
 
 <body>
     <%@ include file="TitleBar.html"%>
-    <form action="SelectTable" method="post">
+    <form action="SelectTable" method="get">
         <div class="container" style="max-width: 600px">
             <div style="font-weight: bold; text-align: center">
             <h1>Select Table</h1>
@@ -46,15 +59,23 @@
                         <tr>
                         <td>
                         <%
-                        ArrayList tableNames = (ArrayList) request.getAttribute("tableNames");
-                        if (tableNames != null) {
-                            Iterator it = tableNames.iterator();
-                            %> <select class="select" id="firstTable" name="Source1" multiple="multiple" style="float: left; margin-left: 10%; min-width: 220px; min-height: 300px;">
+                        ArrayList tableNames1 = (ArrayList) request.getAttribute("tableNames1");
+                        String source1Table = (String) request.getAttribute("source1Table");
+
+                        if (tableNames1 != null) {
+                            Iterator it = tableNames1.iterator();
+                            %> <select class="select" id="firstTable" name="Source1" multiple="multiple" style="float: left; margin-left: 10%; min-width: 220px; min-height: 300px;" onchange="this.form.submit()">
                             <%
                             while (it.hasNext()) {
                                 String tableName = (String) it.next();
-                                %>
-                                <option value="<%=tableName%>"><%=tableName%></option>
+                                %>                                
+                                <option value="<%=tableName%>"
+                                        <%
+                                        if(tableName.equals(source1Table)) {
+                                            %>selected<%
+                                        }
+                                    %>
+                                        ><%=tableName%></option>
                                 <%
                             }
                             %>
@@ -66,8 +87,9 @@
                         </td>
                         <td>
                         <%
-                        if (tableNames != null) {
-                            Iterator it = tableNames.iterator();
+                        ArrayList tableNames2 = (ArrayList) request.getAttribute("tableNames2");
+                        if (tableNames2 != null) {
+                            Iterator it = tableNames2.iterator();
                             %> <select class="select" id="secondTable" name="Source2"
                             multiple="multiple"
                             style="float: left; margin-left: 10%; min-width: 220px; min-height: 300px;">
@@ -91,8 +113,8 @@
             </div>                        
             <div class="span12">
                 <!--the category section-->
-                <div class="list-group center-block" style="text-align: center">
-                    <button type="submit" value="Select Table" class="btn btn-success"
+                <div class="list-group center-block" style="text-align: center">  
+                    <button value="SelectedTable" class="btn btn-success" name="ViewGraph" onclick="DoPush()"
                         style="width: 270px">
                         <i class="icon-circle-arrow-right icon-large"></i> View
                     </button>

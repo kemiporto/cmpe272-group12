@@ -59,7 +59,30 @@ public class CreateTableServlet extends HttpServlet {
 				}
 				document.put("_id", createTableX);
 				document.put("value", "Value");
-				table.insert(document);
+				table.insert(document);                                                               
+                                boolean createTableCollections = true;
+                                for(String name : Util.getMongoDb().getCollectionNames()){
+                                        if(name.equals("TableCollections")){
+                                                createTableCollections=false;
+                                        }
+                                }
+                                if( createTableCollections )
+                                {                                
+                                    DBObject options2 = BasicDBObjectBuilder.start().get();    
+                                    DBCollection tableResourceCollection = Util.getMongoDb().createCollection("TableCollections", options2);  
+                                    BasicDBObject documentResourceCollection = new BasicDBObject();
+                                    documentResourceCollection.put("_id", createTableName);
+                                    documentResourceCollection.put("value", createTableX);
+                                    tableResourceCollection.insert(documentResourceCollection);
+                                }
+                                else
+                                { 
+                                    DBCollection tableResourceCollection = Util.getMongoDb().getCollection("TableCollections");
+                                    BasicDBObject documentResourceCollection = new BasicDBObject();
+                                    documentResourceCollection.put("_id", createTableName);
+                                    documentResourceCollection.put("value", createTableX);
+                                    tableResourceCollection.insert(documentResourceCollection);  
+                                }
 			}else{
 				request.setAttribute("message", "Table Already Exists");
 			}
