@@ -72,7 +72,7 @@ public class SelectTableServlet extends HttpServlet {
                             String StringKeyY = (String) it.next();
                             String tableX = dbObject.get(StringKeyY).toString();
                             String tableName = dbObject.get(StringKeyX).toString();
-                            DBCollection tableS3 = Util.getMongoDb().getCollection(tableName);                            
+                            DBCollection tableS3 = Util.getMongoDb().getCollection(tableName); 
                             if( !Source1Table.equals(tableName) && StringX.equals(tableX) && tableS3.count() > 1 )
                             {
                                 tableNames.add(tableName);
@@ -114,11 +114,40 @@ public class SelectTableServlet extends HttpServlet {
 			DBCollection tableS1 = Util.getMongoDb().getCollection(tableName);
 			DBCursor cursorS1 = tableS1.find();
 			StringBuffer source1String = new StringBuffer( "[" );
+                        
+                        String StringX = new String();                       
+			DBCollection tableS2 = Util.getMongoDb().getCollection("TableCollections");
+			DBCursor cursorS2 = tableS2.find();
+                        ArrayList tableNames = new ArrayList();
+			while (cursorS2.hasNext()) {                            
+                            System.out.println("Finding table");
+                            DBObject dbObject = cursorS2.next();
+                            Set<String> stringSet = dbObject.keySet();
+                            Iterator it = stringSet.iterator();
+                            String StringKeyX = (String) it.next();
+                            String StringKeyY = (String) it.next();
+                            String tableX = dbObject.get(StringKeyY).toString();
+                            String tableNameFound = dbObject.get(StringKeyX).toString();
+                            DBCollection tableS3 = Util.getMongoDb().getCollection(tableName); 
+                            if( tableName.equals(tableNameFound) )
+                            {
+                                StringX = tableX;
+                                break;
+                            }
+			}       
+                        
 			if( cursorS1.hasNext() )
 			{
-				DBObject dbObject = cursorS1.next();
-				source1String.append(" ['" + dbObject.get("_id").toString() + "','"
-						+ dbObject.get("value").toString() + "']");
+                            DBObject dbObject = cursorS1.next();
+                            if( StringX != dbObject.get("_id").toString() )
+                            {
+                                source1String.append(" ['" + StringX + "','Desc']");                                
+                            }
+                            else
+                            {
+                                source1String.append(" ['" + dbObject.get("_id").toString() + "','"
+                                                + dbObject.get("value").toString() + "']");
+                            }
 			}
 			while (cursorS1.hasNext()) {
 				DBObject dbObject = cursorS1.next();
