@@ -108,13 +108,13 @@ public class SelectTableServlet extends HttpServlet {
 			if( cursorS1.hasNext() )
 			{
 				DBObject dbObject = cursorS1.next();
-				source1String.append(" ['" + (String) dbObject.get("_id") + "','"
-						+ (String) dbObject.get("value") + "']");
+				source1String.append(" ['" + dbObject.get("_id").toString() + "','"
+						+ dbObject.get("value").toString() + "']");
 			}
 			while (cursorS1.hasNext()) {
 				DBObject dbObject = cursorS1.next();
-				source1String.append(",['" + (String) dbObject.get("_id") + "',"
-						+ (String) dbObject.get("value") + "]");
+				source1String.append(",['" + dbObject.get("_id").toString() + "',"
+						+ dbObject.get("value").toString() + "]");
 			}
 			source1String.append("]");
 			return source1String.toString();
