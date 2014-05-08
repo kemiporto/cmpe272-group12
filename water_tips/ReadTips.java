@@ -41,6 +41,9 @@ public class ReadTips {
     public static void main(String [] args) throws IOException {
     	ReadTips r = new ReadTips();
     	r.readTips("espawsdb", "indoor");
+    	r.readTips("espawsdb", "kids");
+    	r.readTips("espawsdb", "office");
+    	r.readTips("espawsdb", "outdoor");
     }
 					      
 }
