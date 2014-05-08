@@ -3,6 +3,22 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+    <script src="js/jquery.js"></script>
+    <script type="text/javascript">
+        function navigateBack()
+        {
+            window.history.back();
+        }
+    </script>
+    <script type="text/javascript">
+        function getTitleBarNavigation()
+        {
+            var navigation = [];
+            navigation.push( ["<a class='navbar-brand' href='index.jsp' >Home</a>"] );
+            return navigation;
+        }
+    </script>
+
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
     <title>Insert title here</title>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
@@ -55,6 +71,7 @@
                                 {
                                     var data1 = eval("(" + data1str + ")");
                                     var data2 = eval("(" + data2str + ")");
+                                    console.log( data2 );
                                     var dataTable1 = google.visualization.arrayToDataTable(data1);                                
                                     var dataTable2 = google.visualization.arrayToDataTable(data2);
                                     var dataJoin = google.visualization.data.join(dataTable1, dataTable2, 'full', [[0,0]], [1], [1]);
