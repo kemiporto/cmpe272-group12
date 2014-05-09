@@ -84,7 +84,7 @@ public class CreateTable {
 		}
 		ArrayList<String> catArray = new ArrayList<>();
 		String content =              "$(function () {\n";
-		content = insertLine(content, "    $('#container').highcharts({");
+		content = insertLine(content, "    $('#chart').highcharts({");
 		content = insertLine(content, "       chart: {");
 		content = insertLine(content, "            type: 'spline'");
 		content = insertLine(content, "        },");
@@ -112,6 +112,7 @@ public class CreateTable {
 		content = insertLine(content, "        }],");
 		content = insertLine(content, "    });");
 		content = insertLine(content, "});");
+		content = insertLine(content, "<script src=\"http://code.highcharts.com/highcharts.js\"></script>\n<div id=\"chart\" style=\"height: 300px\"></div>");
 		try {
 			File file = new File(outputFile);
 
