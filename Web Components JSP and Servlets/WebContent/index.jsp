@@ -42,8 +42,12 @@
         <link rel="stylesheet" type="text/css" href="css/component.css" />
         <link rel="stylesheet" type="text/css" href="css/animations.css" />
         <script src="js/modernizr.custom.js"></script>
-        
-        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="js/bootstrap.min.js"></script>
     </head>
 
     <%@ include file="TitleBar.html" %>            
@@ -70,7 +74,7 @@
             <div id="pt-main" class="pt-perspective">
                     <div class="pt-page pt-page-1"><%@ include file="Home.jsp" %></div>
                     <div class="pt-page pt-page-2"><%@ include file="WaterUsage.jsp" %></div>
-                    <div class="pt-page pt-page-3"><h1><span>B collection of</span><strong>Page</strong> Transitions</h1></div>
+                    <div class="pt-page pt-page-3"><%@ include file="SaveWater.jsp" %></div>
                     <div class="pt-page pt-page-4"><h1><span>C collection of</span><strong>Page</strong> Transitions</h1></div>
                     <div class="pt-page pt-page-5"><h1><span>D collection of</span><strong>Page</strong> Transitions</h1></div>
             </div>
@@ -78,15 +82,9 @@
             <div class="pt-message">
                     <p>Your browser does not support CSS animations.</p>
             </div>
-
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+            
             <script src="js/jquery.dlmenu.js"></script>
             <script src="js/pagetransitions.js"></script>
- 
-            <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-            <!-- Include all compiled plugins (below), or include individual files as needed -->
-            <script src="js/bootstrap.min.js"></script>
     </body>                       
 	
 </html>
