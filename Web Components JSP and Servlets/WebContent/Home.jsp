@@ -3,7 +3,7 @@
     <head>
         <title>Homepage</title>
 		
-    </head>
+    </head>    
     
         <div class="container" style="max-width: 1000px;">
             

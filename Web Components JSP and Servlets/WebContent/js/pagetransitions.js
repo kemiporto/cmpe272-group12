@@ -3,9 +3,15 @@ var PageTransitions = (function() {
 	var $main = $( '#pt-main' ),
 		$pages = $main.children( 'div.pt-page' ),
 		$iterate = $( '#iterateEffects' ),
+		$Tab1 = $('#li1' ),
+		$Tab2 = $('#li2' ),
+		$Tab3 = $('#li3' ),
+		$Tab4 = $('#li4' ),
+		$Tab5 = $('#li5' ),
 		animcursor = 1,
 		pagesCount = $pages.length,
 		current = 0,
+		nextPageGoto = 0;
 		isAnimating = false,
 		endCurrPage = false,
 		endNextPage = false,
@@ -19,6 +25,11 @@ var PageTransitions = (function() {
 		animEndEventName = animEndEventNames[ Modernizr.prefixed( 'animation' ) ],
 		// support css animations
 		support = Modernizr.cssanimations;
+		$('.nav li').click(function (e) {
+			//Remove Active Class of previously selected li
+			$('.nav li.active').removeClass('active');
+			$(e.currentTarget).addClass('active');
+		});
 	
 	function init() {
 
@@ -37,6 +48,66 @@ var PageTransitions = (function() {
 			}
 		} );
 
+		$Tab1.on( 'click', function() {
+			if( isAnimating ) {
+				return false;
+			}
+			if( animcursor > 67 ) {
+				animcursor = 1;
+			}
+			nextPageGoto = 0;
+			nextPage( animcursor );
+			++animcursor;
+		} );
+
+		$Tab2.on( 'click', function() {
+			if( isAnimating ) {
+				return false;
+			}
+			if( animcursor > 67 ) {
+				animcursor = 1;
+			}
+			nextPageGoto = 1;
+			nextPage( animcursor );
+			++animcursor;
+		} );
+
+		$Tab3.on( 'click', function() {
+			if( isAnimating ) {
+				return false;
+			}
+			if( animcursor > 67 ) {
+				animcursor = 1;
+			}
+			nextPageGoto = 2;
+			nextPage( animcursor );
+			++animcursor;
+		} );
+
+		$Tab4.on( 'click', function() {
+			if( isAnimating ) {
+				return false;
+			}
+			if( animcursor > 67 ) {
+				animcursor = 1;
+			}
+			nextPageGoto = 3;
+			nextPage( animcursor );
+			++animcursor;
+		} );
+
+		$Tab5.on( 'click', function() {
+			if( isAnimating ) {
+				return false;
+			}
+			if( animcursor > 67 ) {
+				animcursor = 1;
+			}
+			nextPageGoto = 4;
+			nextPage( animcursor );
+			++animcursor;
+		} );
+
 		$iterate.on( 'click', function() {
 			if( isAnimating ) {
 				return false;
@@ -52,20 +123,18 @@ var PageTransitions = (function() {
 
 	function nextPage( animation ) {
 
-		if( isAnimating ) {
+		if( isAnimating || current == nextPageGoto ) {
 			return false;
 		}
 
 		isAnimating = true;
 		
+		if( nextPageGoto > pagesCount ) {
+			nextPageGoto = 1;
+		}
+		
 		var $currPage = $pages.eq( current );
-
-		if( current < pagesCount - 1 ) {
-			++current;
-		}
-		else {
-			current = 0;
-		}
+		current = nextPageGoto;
 
 		var $nextPage = $pages.eq( current ).addClass( 'pt-page-current' ),
 			outClass = '', inClass = '';

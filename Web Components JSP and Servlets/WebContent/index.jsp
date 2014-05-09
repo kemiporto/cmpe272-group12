@@ -42,47 +42,51 @@
         <link rel="stylesheet" type="text/css" href="css/component.css" />
         <link rel="stylesheet" type="text/css" href="css/animations.css" />
         <script src="js/modernizr.custom.js"></script>
+        
+        
     </head>
 
-    <%@ include file="TitleBar.html" %>
+    <%@ include file="TitleBar.html" %>            
             
-            
-        <div id="iterateEffects" class="container" style="max-width: 1000px">
-            <!-- Tabs BODY section -->
-            <ul class="nav nav-tabs">
-            <li class="active"><a>Home</a></li>
-            <li><a>Water Usage</a></li>
-            <li><a>Save Water</a></li>
-            <li><a>Read Your Water Bill</a></li>
-            <li><a>About Us</a></li>
-            <script>
-                    $('#myTab a').click(function (e) {
-                            e.preventDefault();
-                            $(this).tab('show');
-                    });
-            </script>
-            </ul>     
-        </div>
+    <div class="container" style="max-width: 1000px">
+        <!-- Tabs BODY section -->
+        <ul class="nav nav-tabs">
+        <li id="li1" class="active"><a>Home</a></li>
+        <li id="li2" ><a>Water Usage</a></li>
+        <li id="li3" ><a>Save Water</a></li>
+        <li id="li4" ><a>Read Your Water Bill</a></li>
+        <li id="li5" ><a>About Us</a></li>
+        <script>
+                $('#myTab a').click(function (e) {
+                        e.preventDefault();
+                        $(this).tab('show');
+                });
+        </script>
+        </ul>     
+    </div>    
     
-    
-<body style="background-color:#ffffff">
+    <body style="background-color:#ffffff">
 
-        <div id="pt-main" class="pt-perspective">
-                <div class="pt-page pt-page-1"><%@ include file="Home.jsp" %></div>
-                <div class="pt-page pt-page-2"><h1><span>A collection of</span><strong>Page</strong> Transitions</h1></div>
-                <div class="pt-page pt-page-3"><h1><span>A collection of</span><strong>Page</strong> Transitions</h1></div>
-                <div class="pt-page pt-page-4"><h1><span>A collection of</span><strong>Page</strong> Transitions</h1></div>
-                <div class="pt-page pt-page-5"><h1><span>A collection of</span><strong>Page</strong> Transitions</h1></div>
-                <div class="pt-page pt-page-6"><h1><span>A collection of</span><strong>Page</strong> Transitions</h1></div>
-        </div>
+            <div id="pt-main" class="pt-perspective">
+                    <div class="pt-page pt-page-1"><%@ include file="Home.jsp" %></div>
+                    <div class="pt-page pt-page-2"><%@ include file="WaterUsage.jsp" %></div>
+                    <div class="pt-page pt-page-3"><h1><span>B collection of</span><strong>Page</strong> Transitions</h1></div>
+                    <div class="pt-page pt-page-4"><h1><span>C collection of</span><strong>Page</strong> Transitions</h1></div>
+                    <div class="pt-page pt-page-5"><h1><span>D collection of</span><strong>Page</strong> Transitions</h1></div>
+            </div>
 
-        <div class="pt-message">
-                <p>Your browser does not support CSS animations.</p>
-        </div>
+            <div class="pt-message">
+                    <p>Your browser does not support CSS animations.</p>
+            </div>
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-        <script src="js/jquery.dlmenu.js"></script>
-        <script src="js/pagetransitions.js"></script>
-</body>                       
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+            <script src="js/jquery.dlmenu.js"></script>
+            <script src="js/pagetransitions.js"></script>
+ 
+            <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+            <!-- Include all compiled plugins (below), or include individual files as needed -->
+            <script src="js/bootstrap.min.js"></script>
+    </body>                       
 	
 </html>
