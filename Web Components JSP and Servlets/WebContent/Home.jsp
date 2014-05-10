@@ -12,7 +12,6 @@
                 <tr>
                 <td style=" background-color: white;">
                 <div >
-                <body bgcolor=yellow textcolor=black>
                 <p style="width: 200; font-size: 30; font-family: Georgia;">California is in a drought state of Emergency.</p>
                 </div>
                 </td>

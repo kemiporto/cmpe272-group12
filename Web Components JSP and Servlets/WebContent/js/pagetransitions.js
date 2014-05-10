@@ -52,60 +52,65 @@ var PageTransitions = (function() {
 			if( isAnimating ) {
 				return false;
 			}
-			if( animcursor > 67 ) {
-				animcursor = 1;
-			}
 			nextPageGoto = 0;
+			if( nextPageGoto > current ) {
+				animcursor = 1;
+			} else{				
+				animcursor = 2;
+			}
 			nextPage( animcursor );
-			++animcursor;
 		} );
 
 		$Tab2.on( 'click', function() {
 			if( isAnimating ) {
 				return false;
 			}
-			if( animcursor > 67 ) {
-				animcursor = 1;
-			}
 			nextPageGoto = 1;
+			if( nextPageGoto > current ) {
+				animcursor = 1;
+			} else{				
+				animcursor = 2;
+			}
 			nextPage( animcursor );
-			++animcursor;
 		} );
 
 		$Tab3.on( 'click', function() {
 			if( isAnimating ) {
 				return false;
 			}
-			if( animcursor > 67 ) {
+			nextPage( animcursor );
+			if( nextPageGoto > current ) {
 				animcursor = 1;
+			} else{				
+				animcursor = 2;
 			}
 			nextPageGoto = 2;
-			nextPage( animcursor );
-			++animcursor;
 		} );
 
 		$Tab4.on( 'click', function() {
 			if( isAnimating ) {
 				return false;
 			}
-			if( animcursor > 67 ) {
-				animcursor = 1;
-			}
 			nextPageGoto = 3;
+			if( nextPageGoto > current ) {
+				animcursor = 1;
+			} else{				
+				animcursor = 2;
+			}
 			nextPage( animcursor );
-			++animcursor;
 		} );
 
 		$Tab5.on( 'click', function() {
 			if( isAnimating ) {
 				return false;
 			}
-			if( animcursor > 67 ) {
-				animcursor = 1;
-			}
 			nextPageGoto = 4;
+			if( nextPageGoto > current ) {
+				animcursor = 1;
+			} else{				
+				animcursor = 2;
+			}
 			nextPage( animcursor );
-			++animcursor;
 		} );
 
 		$iterate.on( 'click', function() {
@@ -115,7 +120,7 @@ var PageTransitions = (function() {
 			if( animcursor > 67 ) {
 				animcursor = 1;
 			}
-			nextPage( animcursor );
+			nextPage( 1 );
 			++animcursor;
 		} );
 

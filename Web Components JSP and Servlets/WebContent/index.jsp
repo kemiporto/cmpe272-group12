@@ -37,7 +37,6 @@
         <meta name="keywords" content="page transition, css animation, website, effect, css3, jquery" />
         <meta name="author" content="Codrops" />
         <link rel="shortcut icon" href="../favicon.ico"> 
-        <link rel="stylesheet" type="text/css" href="css/default.css" />
         <link rel="stylesheet" type="text/css" href="css/multilevelmenu.css" />
         <link rel="stylesheet" type="text/css" href="css/component.css" />
         <link rel="stylesheet" type="text/css" href="css/animations.css" />
@@ -48,11 +47,13 @@
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="js/bootstrap.min.js"></script>
+        
+        
     </head>
 
     <%@ include file="TitleBar.html" %>            
             
-    <div class="container" style="max-width: 1000px">
+    <div class="container" style="max-width: 850px">
         <!-- Tabs BODY section -->
         <ul class="nav nav-tabs">
         <li id="li1" class="active"><a>Home</a></li>
@@ -75,7 +76,7 @@
                     <div class="pt-page pt-page-1"><%@ include file="Home.jsp" %></div>
                     <div class="pt-page pt-page-2"><%@ include file="WaterUsage.jsp" %></div>
                     <div class="pt-page pt-page-3"><%@ include file="SaveWater.jsp" %></div>
-                    <div class="pt-page pt-page-4"><h1><span>C collection of</span><strong>Page</strong> Transitions</h1></div>
+                    <div class="pt-page pt-page-4"><%@ include file="ReadYourBill.jsp" %></div>
                     <div class="pt-page pt-page-5"><h1><span>D collection of</span><strong>Page</strong> Transitions</h1></div>
             </div>
 
