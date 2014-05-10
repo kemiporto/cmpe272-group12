@@ -28,13 +28,26 @@ public class CreateTable {
 	}
 	
 	//get x values
-	private String getCategories(DBCollection collection1, DBCollection collection2, ArrayList<String> catArray) {
+    private String getCategories(DBCollection collection1, DBCollection collection2, ArrayList<String> catArray, String start) {
 		String categories = "            categories: [";
-		DBCursor cursor1 = collection1.find();
+		BasicDBObject startSearch = new BasicDBObject("_id", new BasicDBObject("$gte", start));
+		DBCursor cursor1;
+		DBCursor cursor2;
+		if(start.isEmpty()) {
+		    cursor1 = collection1.find();
+		}
+		else {
+		    cursor1 = collection1.find(startSearch);
+		}
 		mountCategories(cursor1, catArray);
 		if(collection2 != null) {
-			DBCursor cursor2 = collection2.find();
-			mountCategories(cursor2, catArray);
+		    if(start.isEmpty()) {
+			cursor2 = collection2.find();
+		    }
+		    else {
+			cursor2 = collection2.find(startSearch);
+		    }
+		    mountCategories(cursor2, catArray);
 		}
 		Collections.sort(catArray);
 		boolean first = true;
@@ -50,7 +63,7 @@ public class CreateTable {
 	}
 	
 	//get y values
-	private String getData(DBCollection col, ArrayList<String> catArray) {
+    private String getData(DBCollection col, ArrayList<String> catArray, boolean normalize, double normal) {
 		String data ="     	    data: [";
 		boolean first = true;
 		for(String s: catArray) {
@@ -60,7 +73,11 @@ public class CreateTable {
 			first = false;
 			DBCursor cursor = col.find(new BasicDBObject("_id", s));
 			if(cursor.hasNext()) {
-				data += cursor.next().get("value").toString();
+			    double d = ((Number) cursor.next().get("value")).doubleValue();
+			    if(normalize) {
+				d *= normal;
+			    }
+			    data += Double.toString(d);
 			} else {
 				data += "null";
 			}
@@ -69,7 +86,7 @@ public class CreateTable {
 		return  data;
 	}
 	
-	public void makeChart(String collectionName1, String collectionName2, String chartName1, String chartName2, String dbName, String outputFile, String chartTitle, String yAxisInfo) throws IOException {
+    public void makeChart(String collectionName1, String collectionName2, String chartName1, String chartName2, String dbName, String outputFile, String chartTitle, String yAxisInfo, boolean normalize1, double normal1, boolean normalize2, double normal2, String startX) throws IOException {
 		MongoClient mongoClient = new MongoClient("localhost");
 		DB db = mongoClient.getDB(dbName);
 		String chartName = chartName1;
@@ -92,7 +109,7 @@ public class CreateTable {
 		content = insertLine(content, "            text: '" + chartName + "'");
 		content = insertLine(content, "        },");
 		content = insertLine(content, "        xAxis: {");
-		content = insertLine(content, getCategories(col1, col2, catArray));
+		content = insertLine(content, getCategories(col1, col2, catArray, startX));
 		content = insertLine(content, "        },");
 		content = insertLine(content, "        yAxis: {");
 		content = insertLine(content, "            title: {");
@@ -102,12 +119,12 @@ public class CreateTable {
 		content = insertLine(content, "        series: [{");
 		content = insertLine(content, "            name: '" + chartName1 + "',");
 		content = insertLine(content, "            connectNulls: true,");
-		content = insertLine(content, getData(col1, catArray));
+		content = insertLine(content, getData(col1, catArray, normalize1, normal1));
 		if(!has1chart) {
 			content = insertLine(content, "        }, {");
 			content = insertLine(content, "            name: '" + chartName2 + "',");
 			content = insertLine(content, "            connectNulls: true,");
-			content = insertLine(content, getData(col2, catArray));
+			content = insertLine(content, getData(col2, catArray, normalize2, normal2));
 		}
 		content = insertLine(content, "        }],");
 		content = insertLine(content, "    });");
@@ -130,6 +147,6 @@ public class CreateTable {
 	
 	public static void main(String args[]) throws IOException {
 		CreateTable c = new CreateTable();
-		c.makeChart("year1", "year2", "test1", "test2", "test", "out", "testing making chart", "info");
+		c.makeChart("sac_faa_monthly", "", "Precipitation", "", "espawsdb", "out", "Precipitation", "index", false, 0, false, 40, "2010");
 	}
 }

@@ -1,64 +1,37 @@
+
 <html>
-    <link href="./css/bootstrap.css" rel="stylesheet">
-    <head>
-    	<script src="js/jquery.js"></script>
-        <script type="text/javascript">
-            function navigateBack()
-            {
-                window.history.back();
-            }
-        </script>
-        <script type="text/javascript">
-            function getTitleBarNavigation()
-            {
-                var navigation = [];
-                navigation.push( ["<a class='navbar-brand' href='CrowdSourcingDataCollection.jsp' >CrowdSourcingDataCollection</a>"] );
-                return navigation;
-            }
-        </script>      	
-    </head>
+<head>
+<title>Homepage</title>
 
-    <%@ include file="TitleBar.html" %>
+</head>
 
-    <body>
-        <div>            
-            <div class="container" style="max-width:300px">
-                <h1> <div style="font-weight:bold; text-align:center">Home</div> </h1>		
-            </div>
-            <p></p>
-	</div>
-    </body>
 
-    <body>
-        <div>            
-            <div class="container" style="max-width:300px">			     
-                <div class="span12" >    
-                    <!--the category section-->
-                    <div class="list-group center-block" style="text-align:center">
-	
-                        <form action="CreateTable">
-                                        <button type="submit" value="Add Data" class="btn btn-success" style="width: 270px">
-                                                <i class="icon-circle-arrow-right icon-large"></i> Add Data
-                                        </button>
-                                </form>
-                                <form action="SelectTable">
-                                        <button type="submit" value="View Crowd Source Data" class="btn btn-success" style="width: 270px">
-                                                <i class="icon-circle-arrow-right icon-large"></i> View Crowd Source Data
-                                        </button>
-                                </form>
+<h5>Want to know how much water you use everyday? Take the below
+	quiz..</h5>
 
-                        <div style="overflow: hidden;">
-                                <div style="float:left;">
-                                        <img src="<%=request.getContextPath()%>/images/images.jpg" style="max-width: 400px;" />
-                                </div>
-                                <div style="float:left; margin-left:30px;">
-                                        <img src="<%=request.getContextPath()%>/images/watersaving.jpg" style="max-width: 400px;" />
-                                </div>	
-                        </div>					
-                    </div>
+<div class="accordion" id="accordion2">
+	<div class="accordion-group">
+		<div class="accordion-heading">
+			<a class="accordion-toggle" data-toggle="collapse"
+				data-parent="#accordion2" href="#collapseOne"> Collapsible Group
+				Item #1 </a>
 		</div>
-            </div>        
-        </div>
-    </body>    
-	
+		<div id="collapseOne" class="accordion-body collapse in">
+			<div class="accordion-inner">Anim pariatur cliche...</div>
+		</div>
+	</div>
+	<div class="accordion-group">
+		<div class="accordion-heading">
+			<a class="accordion-toggle" data-toggle="collapse"
+				data-parent="#accordion2" href="#collapseTwo"> Collapsible Group
+				Item #2 </a>
+		</div>
+		<div id="collapseTwo" class="accordion-body collapse">
+			<div class="accordion-inner">Anim pariatur cliche...</div>
+		</div>
+	</div>
+</div>
+
+
+
 </html>
