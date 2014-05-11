@@ -6,6 +6,14 @@
 
     
 <div class="container" style="max-width: 1000px;">
+    
+    
+
+<table class="table table-striped table-bordered table-condensed"
+    style="text-align: left; float: center; width: 1000; box-shadow: 0px 0px 25px #888888; background-color: white;"> 
+
+    <tr>
+        <td>
 <h5>How to save water changing little things on our daily routine</h5>
 
  <div class="accordion" id="xaccordion1">
@@ -411,5 +419,8 @@
         <!-- Inner accordion ends here -->
 
       </div>
+            </td>
+        </tr>
+    </table>
     </div>
 </html>

@@ -8,9 +8,14 @@
       <script src="js/bootstrap.collapse.js"></script>
       <link href="css/bootstrap.min.css" rel="stylesheet">
     </head>
-    
-
+            
       <div class="container" >
+    
+<table class="table table-striped table-bordered table-condensed"
+    style="text-align: left; float: center; width: 1000; box-shadow: 0px 0px 25px #888888; background-color: white;"> 
+    <tr>
+        <td>
+          
          <h5>Want to know how much water you use everyday? Take the below quiz..</h5>
          <div class="accordion" id="my-accordion" >
             <div class="accordion-group">
@@ -186,9 +191,13 @@
                </div>
             </div>
          </div>
+       
+            </td>
+        </tr>
+    </table> 
       </div>
-      <div id="container" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
-        
+    
+      <div id="container" style="min-width: 310px; height: 400px; max-width: 1000px; margin: 0 auto"></div>
         
         
  </html>

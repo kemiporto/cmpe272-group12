@@ -95,54 +95,70 @@
 <div class="container" style="max-width: 1000px;">
     <h5>Information about California drought situation</h5>
 
-    <div class="accordion" id="accordion11">
-      <div class="accordion-group">
-        <div class="accordion-heading">
-          <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion11" href="#collapseOne1">
-            Precipitation
-          </a>
-        </div>
-        <div id="collapseOne1" class="accordion-body collapse in">
-          <div class="accordion-inner">
-            <div class="container" style="max-width: 1000px;">
-                <div id="PrecChart" style="width: 850px; height: 600px;"></div>                   
-            </div>
-             <div class="container" style="max-width: 1000px;">
-            As we can see on the chart above, California has every year a season of no rains, but there is usually a
-             few months during the year which precipitation gets above 0.05. Those months are responsible to increase 
-             the groundwater level enough to help us maintain the drough on a controlled way. <br />
-             The problem we are facing now is mainly caused bu the fact that the precipitation doesn't achieve 0.05 
-             since January 2013.
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
     
-    <br/>
+    <table class="table table-striped table-bordered table-condensed"
+        style="text-align: center; float: center; width: 1000; box-shadow: 0px 0px 25px #888888; background-color: white;"> 
 
-    <div class="accordion" id="accordion11">
-      <div class="accordion-group">
-        <div class="accordion-heading">
-          <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion11" href="#collapseOne1">
-            Drought Intensity
-          </a>
-        </div>
-        <div id="collapseOne1" class="accordion-body collapse in">
-          <div class="accordion-inner">
-            <div class="container" style="max-width: 1000px;">
-                <div id="DroughtChart" style="width: 850px; height: 600px;"></div>                   
+        <tr>
+            <td>
+                <div class="accordion" id="accordion11">
+                  <div class="accordion-group">
+                    <div class="accordion-heading">
+                      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion11" href="#collapseOne1">
+                        Precipitation
+                      </a>
+                    </div>
+                    <div id="collapseOne1" class="accordion-body collapse in">
+                      <div class="accordion-inner">
+                        <div class="container" style="max-width: 1000px;">
+                            <div id="PrecChart" style="width: 850px; height: 600px;"></div>                   
+                        </div>
+                         <div class="container" style="max-width: 1000px;">
+                        As we can see on the chart above, California has every year a season of no rains, but there is usually a
+                         few months during the year which precipitation gets above 0.05. Those months are responsible to increase 
+                         the groundwater level enough to help us maintain the drough on a controlled way. <br />
+                         The problem we are facing now is mainly caused bu the fact that the precipitation doesn't achieve 0.05 
+                         since January 2013.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+    <table class="table table-striped table-bordered table-condensed"
+        style="text-align: center; float: center; width: 1000; box-shadow: 0px 0px 25px #888888; background-color: white;"> 
+
+        <tr>
+            <td>
+
+        <div class="accordion" id="accordion11">
+          <div class="accordion-group">
+            <div class="accordion-heading">
+              <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion11" href="#collapseOne1">
+                Drought Intensity
+              </a>
             </div>
-            <div class="container" style="max-width: 1000px;">
-                        The chart above classifies the intensity of the drought in California in six levels: from no drought
-                         (nothing) to exceptional Drought. The graph shows the percentage of California in each intensity level.
-                         We can see that we've always had periods of drought, but they would be mostly between the moderate
-                          drought and severe drought intensity.  <br />
-                         But since
+            <div id="collapseOne1" class="accordion-body collapse in">
+              <div class="accordion-inner">
+                <div class="container" style="max-width: 1000px;">
+                    <div id="DroughtChart" style="width: 850px; height: 600px;"></div>                   
+                </div>
+                <div class="container" style="max-width: 1000px;">
+                            The chart above classifies the intensity of the drought in California in six levels: from no drought
+                             (nothing) to exceptional Drought. The graph shows the percentage of California in each intensity level.
+                             We can see that we've always had periods of drought, but they would be mostly between the moderate
+                              drought and severe drought intensity.  <br />
+                             But since
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
+            </td>
+        </tr>
+    </table>
 </div>
 </html>

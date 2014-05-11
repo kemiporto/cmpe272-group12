@@ -44,12 +44,52 @@
             });
         });        
         </script>
+        
+        <script type="text/javascript">
+            function calculateUnitsToGallons(){
+                var units = parseInt($('input[name=unitsEditBox]').val(),10);
+                var gallons = 748.5 * units;
+                var gallonsEditBox = document.getElementById("gallonsEditBox");
+                gallonsEditBox.value = gallons;
+            }
+        </script>
+        
+         <style>
+            #map_canvas {
+              width: 1000px;
+              height: 400px;
+            }
+          </style>
+          <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+          <script>
+            function initialize() {                
+            
+            if (navigator.geolocation)
+            {
+              navigator.geolocation.getCurrentPosition(showPosition);
+            }
+            else{
+            }
+            }
+            
+            function showPosition(position) {                
+              var map_canvas = document.getElementById('map_canvas');
+              var map_options = {
+                center: new google.maps.LatLng(position.coords.latitude, position.coords.longitude),
+                zoom: 8,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+              }
+              var map = new google.maps.Map(map_canvas, map_options)
+            }
+            google.maps.event.addDomListener(window, 'load', initialize);
+          </script>
+    
     </head>    
     
         <div class="container" style="max-width: 1000px;">
                 
             <table class="table table-striped table-bordered table-condensed"
-                style="text-align: center; float: center; width: 800; box-shadow: 0px 0px 25px #888888; background-color: white;">
+                style="text-align: center; float: center; width: 1000; box-shadow: 0px 0px 25px #888888; background-color: white;">
                 <tr>
                     <td>
                     <div>                    
@@ -60,40 +100,43 @@
                 
                 <tr>
                     <td>
-                    <div align="center" id = "myCarousel" class ="carousel slide" data-ride="carousel" data-interval="2000" data-wrap = "true">
+                        <div style="width: 1000; text-align: center;" align="center" id = "myCarousel" class ="carousel slide" data-ride="carousel" data-interval="2000" data-wrap = "true">                                   
+                                <ol class = "carousel-indicators" >
+                                    <li data-target = "#myCarousel" data-slide-to = "0" class = "active"></li>
+                                    <li data-target = "#myCarousel" data-slide-to = "1"></li>
+                                    <li data-target = "#myCarousel" data-slide-to = "2"></li>
+                                </ol>	
 
-                        <div>                
-                            <ol class = "carousel-indicators" >
-                                <li data-target = "#myCarousel" data-slide-to = "0" class = "active"></li>
-                                <li data-target = "#myCarousel" data-slide-to = "1"></li>
-                                <li data-target = "#myCarousel" data-slide-to = "2"></li>
-                            </ol>	
+                                <div class = "carousel-inner" >
 
-                            <div class = "carousel-inner" >
+                                    <div class = "item active"   >
+                                            <img src ="images/WaterBillIntro.jpg" alt = "Intro" class = "img-responsive" >  
+                                    </div>
 
-                                <div class = "item active"   >
-                                        <img src ="images/WaterBillIntro.jpg" alt = "Intro" class = "img-responsive" >  
+                                    <div class = "item "   >
+                                        <img src ="images/WaterBillUsage.jpg" alt = "Water Usage" class = "img-responsive" >  
+                                    </div>
+
+                                    <div class = "item "   >
+                                        <img src ="images/WaterBillCredit.jpg" alt = "Credit/Refunds" class = "img-responsive" >  
+                                    </div>
                                 </div>
 
-                                <div class = "item "   >
-                                    <img src ="images/WaterBillUsage.jpg" alt = "Water Usage" class = "img-responsive" >  
-                                </div>
-
-                                <div class = "item "   >
-                                    <img src ="images/WaterBillCredit.jpg" alt = "Credit/Refunds" class = "img-responsive" >  
-                                </div>
-                            </div>
-
-                            <a class ="carousel-control left" href= "#myCarousel" data-slide = "prev">
-                               <span class = "icon-prev"> </span>
-                            </a> 
-                            <a class ="carousel-control right" href= "#myCarousel" data-slide = "next">
-                               <span class = "icon-next"> </span>
-                            </a> 
+                                <a class ="carousel-control left" href= "#myCarousel" data-slide = "prev">
+                                   <span class = "icon-prev"> </span>
+                                </a> 
+                                <a class ="carousel-control right" href= "#myCarousel" data-slide = "next">
+                                   <span class = "icon-next"> </span>
+                                </a> 
                         </div>
-                    </div>
                     <td>
                 </tr>
+            </table>
+                
+                
+                
+            <table class="table table-striped table-bordered table-condensed"
+                style="text-align: center; float: center; width: 1000; box-shadow: 0px 0px 25px #888888; background-color: white;">
                 
                 <tr>
                     <td>
@@ -104,6 +147,43 @@
                 <tr>
                     <td>
                         <div id="chart" style="width: 1000px; height: 600px;"></div>
+                    </td>                    
+                </tr>
+            </table>
+                
+            <table class="table table-striped table-bordered table-condensed"
+                style="text-align: center; float: center; width: 1000; box-shadow: 0px 0px 25px #888888; background-color: white;"> 
+                
+                <tr>
+                    <td>
+                        <p style="width: 1000; font-size: 20; font-family: Georgia;">Convert Units To Gallons.</p>
+                    </td>                    
+                </tr>               
+                <tr>
+                    <td>                        
+                     <div class="form-group">
+                        <br/>
+                        <input type="number" min="0" class="form-control" placeholder="Units" name="unitsEditBox">
+                        <br/>
+                        <input type="number" min="0" class="form-control" placeholder="Gallons" id="gallonsEditBox" name="gallonsEditBox" disabled>
+                        <br/>
+                        <button  class="btn btn-default" onClick="calculateUnitsToGallons();" onClick="calculateUnitsToGallons();">Submit</button>
+                     </div>
+                    </td>                    
+                </tr>
+            </table>
+                
+            <table class="table table-striped table-bordered table-condensed"
+                style="text-align: center; float: center; width: 1000; box-shadow: 0px 0px 25px #888888; background-color: white;">
+                
+                <tr>
+                    <td>
+                        <p style="width: 1000; font-size: 20; font-family: Georgia;">Locate a water provider near you.</p>
+                    </td>                    
+                </tr>                
+                <tr>
+                    <td>
+                        <div id="map_canvas"></div>
                     </td>                    
                 </tr>
             </table>
