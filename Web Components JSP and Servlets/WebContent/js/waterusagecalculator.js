@@ -133,12 +133,13 @@ function calculateWaterUsage(){
                 type: 'pie',
                 name: 'Type',
                 data: [
-                    ['Firefox',   45.0],
-                    ['IE',       26.8],
-                    ['Chrome', 12.8],
-                    ['Safari',    8.5],
-                    ['Opera',     6.2],
-                    ['Others',   0.7]
+                    ['Showers', percentShowerGallon  ],
+                    [' Baths',   percentBathGallon],
+                    ['Laundary',       percentLaundaryGallon],
+                    ['Kitchen', percentLoadsGallon],
+                    ['Toilets',    percentFlushGallon],
+                    ['Landscaping',     percentLandScapingGallon],
+                    ['Others',   percentOtherGallon]
                 ]
             }]
         });

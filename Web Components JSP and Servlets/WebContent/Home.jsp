@@ -26,6 +26,9 @@
                 <a href="#"><img id="slide-3" src="data/images/lake_oroville_before_and_after_3.jpg" alt="Lake Oroville Before And After 3" title="Lake Oroville Before And After 3" /></a>
                 <a href="#"><img id="slide-4" src="data/images/lake_oroville_before_and_after_4.jpg" alt="Lake Oroville Before And After 4" title="Lake Oroville Before And After 4" /></a>
                 <a href="#"><img id="slide-5" src="data/images/lake_oroville_before_and_after.jpg" alt="Lake Oroville Before And After" title="Lake Oroville Before And After" /></a>
+                <a href="#"><img id="slide-6" src="data/images/Drought2.jpg" alt="Drought2" title="Drought2" /></a>
+                <a href="#"><img id="slide-7" src="data/images/Drought3.jpg" alt="Drought1" title="Drought3" /></a>
+                <a href="#"><img id="slide-8" src="data/images/Drought4.jpg" alt="Drought4" title="Drought4" /></a>
                 </div>
                 <div class="slideshow-thumbnails">
                 <ul>
@@ -35,6 +38,9 @@
                 <li><a href="#slide-3"><img src="data/thumbnails/lake_oroville_before_and_after_3.jpg" alt="Lake Oroville Before And After 3" /></a></li>
                 <li><a href="#slide-4"><img src="data/thumbnails/lake_oroville_before_and_after_4.jpg" alt="Lake Oroville Before And After 4" /></a></li>
                 <li><a href="#slide-5"><img src="data/thumbnails/lake_oroville_before_and_after.jpg" alt="Lake Oroville Before And After" /></a></li>
+                <li><a href="#slide-6"><img src="data/thumbnails/Drought2.jpg" alt="Drought2" /></a></li>
+                <li><a href="#slide-7"><img src="data/thumbnails/Drought3.jpg" alt="Drought3" /></a></li>
+                <li><a href="#slide-8"><img src="data/thumbnails/Drought4.jpg" alt="Drought4" /></a></li>
                 </ul>
                 </div>
                 <a id="vlb" href="http://visualslideshow.com">Flash Slideshow Maker by VisualSlideshow.com v2.0</a>
