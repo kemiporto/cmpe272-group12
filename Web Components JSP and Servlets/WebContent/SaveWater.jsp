@@ -411,8 +411,4 @@
         <!-- Inner accordion ends here -->
 
       </div>
-    </div>
-  </div>
-  
-</div>
 </html>
