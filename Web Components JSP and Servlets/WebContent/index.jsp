@@ -50,7 +50,11 @@
         
     </head>
 
-    <%@ include file="TitleBar.html" %>            
+    <%@ include file="TitleBar.html" %>     
+    
+    <style>
+    	ul.nav a:hover { color: #ffffff !important; background-color: #6699ff !important;}
+    </style>       
             
     <div class="container" style="max-width: 850px">
         <!-- Tabs BODY section -->
