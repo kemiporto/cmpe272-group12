@@ -8,23 +8,29 @@
 
 <h5>How to save water changing little things on our daily routine</h5>
 
-<div class="form" id="accordion3">
+ <div class="accordion" id="xaccordion1">
+  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#xaccordion1" href="#xcollapseTwo">
+        Indoor
+      </a>
+    </div>
+    <div id="xcollapseTwo" class="accordion-body collapse">
+      <div class="accordion-inner">
 
-	<div class="accordion-group">
-		<div class="accordion-heading" id="Indoor">
-			<a class="accordion-toggle" data-toggle="collapse"
-				data-parent="#accordion3"> Indoor </a>
-		</div>
-		<div id="collapseIndoor" class="accordion-body collapse in ">
-			<form class="navbar-form navbar-left">
-				<div class="accordion-heading" id="Indoor-Kitchen">
-					<a class="accordion-toggle" data-toggle="collapse"
-						data-parent="#Indoor" href="#kitchen-info"> Kitchen </a>
-				</div>
-				<div class="accordion-body collapse" id="kitchen-info">
-					<div class="form-group">
-						#1 There are a number of ways to save water, and they all start
-						with you.<br /> #2 When washing dishes by hand, don’t let the
+        <!-- Here we insert another nested accordion -->
+
+        <div class="accordion" id="xaccordion2">
+          <div class="accordion-group">
+            <div class="accordion-heading">
+              <a class="accordion-toggle" data-toggle="collapse" data-parent="#xaccordion2" href="#kitchen">
+                Kitchen
+              </a>
+            </div>
+            <div id="kitchen" class="accordion-body collapse in">
+              <div class="accordion-inner">
+ 						#1 There are a number of ways to save water, and they all start
+						with you.<br /> #2 When washing dishes by hand, do not let the
 						water run. Fill one basin with wash water and the other with rinse
 						water.<br /> #3 Dishwashers typically use less water than washing
 						dishes by hand. Now, Energy Star dishwashers save even more water
@@ -37,36 +43,35 @@
 						disposal sparingly. Instead, compost vegetable food waste and save
 						gallons every time.<br /> #8 Wash your fruits and vegetables in a
 						pan of water instead of running water from the tap.<br /> #9
-						Don’t use running water to thaw food. For water efficiency and
+						Do not use running water to thaw food. For water efficiency and
 						food safety, defrost food in the refrigerator.<br /> #10 Install
-						an instant water heater near your kitchen sink so you don’t have
+						an instant water heater near your kitchen sink so you don't have
 						to run the water while it heats up. This also reduces energy
 						costs.<br /> #11 Keep a pitcher of drinking water in the
 						refrigerator instead of running the tap. This way, every drop goes
 						down you and not the drain.<br /> #12 Reuse leftover water from
-						cooked or steamed foods to start a nutritious soup, it’s one more
+						cooked or steamed foods to start a nutritious soup, it's one more
 						way to get eight glasses of water a day.<br /> #13 Cook food in
 						as little water as possible. This also helps it retain more
 						nutrients.<br /> #14 Select the proper pan size for cooking.
 						Large pans may require more cooking water than necessary.<br />
-						#15 If you accidentally drop ice cubes, don’t throw them in the
+						#15 If you accidentally drop ice cubes, don't throw them in the
 						sink. Drop them in a house plant instead.<br /> #16 Collect the
 						water you use while rinsing fruit and vegetables. Use it to water
 						house plants.<br /> #17 When shopping for a new dishwasher, use
 						the Consortium for Energy Efficiency website to compare water use
 						between models.<br />
-					</div>
-				</div>
-			</form>
-		</div>
-		<div id="collapseIndoor2" class="accordion-body collapse in ">
-			<form class="navbar-form navbar-left">
-				<div class="accordion-heading" id="Indoor-Laundry-Room">
-					<a class="accordion-toggle" data-toggle="collapse"
-						data-parent="#Indoor" href="#laundry-info"> Laundry Room </a>
-				</div>
-				<div class="accordion-body collapse" id="laundry-info">
-					<div class="form-group">
+              </div>
+            </div>
+          </div>
+          <div class="accordion-group">
+            <div class="accordion-heading">
+              <a class="accordion-toggle" data-toggle="collapse" data-parent="#xaccordion2" href="#laundry">
+                Laundry Room
+              </a>
+            </div>
+            <div id="laundry" class="accordion-body collapse">
+              <div class="accordion-inner">
 						#1 When doing laundry, match the water level to the size of the
 						load.<br /> #2 Washing dark clothes in cold water saves water and
 						energy, and helps your clothes retain their color.<br /> #3 When
@@ -77,35 +82,36 @@
 						county for codes.<br /> #5 When buying a washer, check the
 						Consortium for Energy Efficiency website to compare water use
 						between models.<br />
-					</div>
-				</div>
-			</form>
-		</div>
-		<div id="collapseIndoor3" class="accordion-body collapse in ">
-			<form class="navbar-form navbar-left">
-				<div class="accordion-heading" id="Indoor-Bathroom">
-					<a class="accordion-toggle" data-toggle="collapse"
-						data-parent="#Indoor" href="#bathroom-info"> Bathroom </a>
-				</div>
-				<div class="accordion-body collapse" id="bathroom-info">
-					<div class="form-group">
+              </div>
+            </div>
+          </div>
+
+
+          <div class="accordion-group">
+            <div class="accordion-heading">
+              <a class="accordion-toggle" data-toggle="collapse" data-parent="#xaccordion2" href="#bathroom">
+                Bathroom
+              </a>
+            </div>
+            <div id="bathroom" class="accordion-body collapse">
+              <div class="accordion-inner">
 						#1 If your shower fills a one-gallon bucket in less than 20
 						seconds, replace the showerhead with a WaterSense® labeled model.<br />
-						#2 Shorten your shower by a minute or two and you’ll save up to
+						#2 Shorten your shower by a minute or two and you'll save up to
 						150 gallons per month.<br /> #3 Time your shower to keep it under
-						5 minutes. You’ll save up to 1,000 gallons per month.<br /> #4
+						5 minutes. You'll save up to 1,000 gallons per month.<br /> #4
 						Toilet leaks can be silent! Be sure to test your toilet for leaks
 						at least once a year.<br /> #5 Put food coloring in your toilet
-						tank. If it seeps into the bowl without flushing, there’s a leak.
+						tank. If it seeps into the bowl without flushing, there's a leak.
 						Fix it and start saving gallons.<br /> #6 When running a bath,
 						plug the bathtub before turning on the water. Adjust the
 						temperature as the tub fills.<br /> #7 Upgrade older toilets with
 						water-saving WaterSense® labeled models.<br /> #8 If your toilet
-						flapper doesn’t close properly after flushing, replace it.<br />
-						#9 Use a WaterSense® labeled showerhead. They’re inexpensive, easy
+						flapper doesn't close properly after flushing, replace it.<br />
+						#9 Use a WaterSense® labeled showerhead. They're inexpensive, easy
 						to install, and can save you up to 750 gallons a month.<br /> #10
 						Turn off the water while you brush your teeth and save up to 4
-						gallons a minute. That’s up to 200 gallons a week for a family of
+						gallons a minute. That's up to 200 gallons a week for a family of
 						four.<br /> #11 If your toilet was installed before 1992,
 						purchasing a WaterSense® labeled toilet can reduce the amount of
 						water used for each flush.<br /> #12 Consider buying a dual-flush
@@ -124,18 +130,19 @@
 						gallons per day! Check your faucets and showerheads for leaks.<br />
 						#21 While you wait for hot water, collect the running water and
 						use it to water plants.<br />
-					</div>
-				</div>
-			</form>
-		</div>
-		<div id="collapseIndoor4" class="accordion-body collapse in ">
-			<form class="navbar-form navbar-left">
-				<div class="accordion-heading" id="Indoor-general">
-					<a class="accordion-toggle" data-toggle="collapse"
-						data-parent="#Indoor" href="#general-info"> General </a>
-				</div>
-				<div class="accordion-body collapse" id="general-info">
-					<div class="form-group">
+              </div>
+            </div>
+          </div>
+
+
+          <div class="accordion-group">
+            <div class="accordion-heading">
+              <a class="accordion-toggle" data-toggle="collapse" data-parent="#xaccordion2" href="#in-general">
+                General
+              </a>
+            </div>
+            <div id="in-general" class="accordion-body collapse">
+              <div class="accordion-inner">
 						#1 Teach children to turn off faucets tightly after each use.<br />
 						#2 Watch the Home Water Challenge video or use the Home Water
 						Audit Calculator to see where you can save water.<br /> #3 When
@@ -149,13 +156,13 @@
 						check for leaks.<br /> #8 Reward kids for the water-saving tips
 						they follow.<br /> #9 Avoid recreational water toys that require
 						a constant flow of water.<br /> #10 Grab a wrench and fix that
-						leaky faucet. It’s simple, inexpensive, and you can save 140
+						leaky faucet. It's simple, inexpensive, and you can save 140
 						gallons a week.<br /> #11 Hire a GreenPlumber® to help reduce
 						your water, energy, and chemical use.<br /> #12 Be a leak
 						detective! Check all hoses, connectors, and faucets regularly for
-						leaks.<br /> #13 We’re more likely to notice leaky faucets
-						indoors, but don’t forget to check outdoor faucets, pipes, and
-						hoses.<br /> #14 See a leak you can’t fix? Tell a parent,
+						leaks.<br /> #13 We're more likely to notice leaky faucets
+						indoors, but don't forget to check outdoor faucets, pipes, and
+						hoses.<br /> #14 See a leak you can't fix? Tell a parent,
 						teacher, employer, or property manager, or call a handyman.<br />
 						#15 At home or while staying in a hotel, reuse your towels.<br />
 						#16 Make suggestions to your employer or school about ways to save
@@ -163,28 +170,42 @@
 						when they are full. You can save up to 1,000 gallons a month.<br />
 						#18 See how your water use stacks up to others by calculating your
 						daily water use.<br />
-					</div>
-				</div>
-			</form>
-		</div>
-	</div>
-</div>
+              </div>
+            </div>
+          </div>
 
-<div class="form" id="accordion4">
-	<div class="accordion-group">
-		<div class="accordion-heading" id="Outdoor">
-			<a class="accordion-toggle" data-toggle="collapse"
-				data-parent="#accordion4"> Outdoor </a>
-		</div>
-		<div id="collapseOutdoor" class="accordion-body collapse in ">
-			<form class="navbar-form navbar-left">
-				<div class="accordion-heading" id="Outdoor-XLandscaping">
-					<a class="accordion-toggle" data-toggle="collapse"
-						data-parent="#Outdoor" href="#Xlandscaping-info"> Xeriscape
-						Landscaping </a>
-				</div>
-				<div class="accordion-body collapse" id="Xlandscaping-info">
-					<div class="form-group">
+        </div>          
+
+        <!-- Inner accordion ends here -->
+
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  
+    <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#xxcollapseTwo">
+        Outdoor
+      </a>
+    </div>
+    <div id="xxcollapseTwo" class="accordion-body collapse">
+      <div class="accordion-inner">
+
+        <!-- Here we insert another nested accordion -->
+
+        <div class="accordion" id="accordion2x">
+          <div class="accordion-group">
+            <div class="accordion-heading">
+              <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2x" href="#xlandscape">
+                Xeriscape Landscape
+              </a>
+            </div>
+            <div id="xlandscape" class="accordion-body collapse in">
+              <div class="accordion-inner">
 						#1 Use porous material for walkways and patios to prevent wasteful
 						runoff and keep water in your yard.<br /> #2 Group plants with
 						the same watering needs together to avoid overwatering some while
@@ -220,18 +241,18 @@
 						the runoff to plants and trees.<br /> #19 For automatic water
 						savings, direct water from rain gutters and HVAC systems to
 						water-loving plants in your landscape.<br />
-					</div>
-				</div>
-			</form>
-		</div>
-		<div id="collapseOutdoor2" class="accordion-body collapse in ">
-			<form class="navbar-form navbar-left">
-				<div class="accordion-heading" id="outdoor-lawn">
-					<a class="accordion-toggle" data-toggle="collapse"
-						data-parent="#Outdoor" href="#lawn-info"> Lawn Care </a>
-				</div>
-				<div class="accordion-body collapse" id="lawn-info">
-					<div class="form-group">
+              </div>
+            </div>
+          </div>
+          
+          <div class="accordion-group">
+            <div class="accordion-heading">
+              <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2x" href="#lawn">
+                Lawn
+              </a>
+            </div>
+            <div id="lawn" class="accordion-body collapse">
+              <div class="accordion-inner">
 						#1 Hire a qualified pro to install your irrigation system and keep
 						it working properly and efficiently.<br /> #2 Hire a Smartscape
 						Certified professional landscaper who has received landscape
@@ -243,7 +264,7 @@
 						mix or blend that matches your climate and site conditions.<br />
 						#6 Aerate your lawn periodically. Holes every six inches will
 						allow water to reach the roots, rather than run off the surface.<br />
-						#7 If walking across the lawn leaves footprints (blades don’t
+						#7 If walking across the lawn leaves footprints (blades don't
 						spring back up), then it is time to water.<br /> #8 Let your lawn
 						go dormant (brown) during the winter. Dormant grass only needs to
 						be watered every three to four weeks, less if it rains.<br /> #9
@@ -257,22 +278,23 @@
 						three days and your winter lawn once every five days.<br /> #13
 						Catch water in an empty tuna can to measure sprinkler output. 3/4
 						to 1 inch of water is enough to apply each time you irrigate.<br />
-					</div>
-				</div>
-			</form>
-		</div>
-		<div id="collapseOutdoor3" class="accordion-body collapse in ">
-			<form class="navbar-form navbar-left">
-				<div class="accordion-heading" id="outdoor-landscape">
-					<a class="accordion-toggle" data-toggle="collapse"
-						data-parent="#Outdoor" href="#landscape-info"> Landscape </a>
-				</div>
-				<div class="accordion-body collapse" id="landscape-info">
-					<div class="form-group">
-						#1 Read the Landscape Watering by the Numbers guidebook to help
+              </div>
+            </div>
+          </div>
+        </div>          
+
+          <div class="accordion-group">
+            <div class="accordion-heading">
+              <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2x" href="#landscape">
+                Landscape
+              </a>
+            </div>
+            <div id="landscape" class="accordion-body collapse">
+              <div class="accordion-inner">
+ 						#1 Read the Landscape Watering by the Numbers guidebook to help
 						you determine how long and how much to water.<br /> #2 Use a
 						trowel, shovel, or soil probe to examine soil moisture depth. If
-						the top two to three inches of soil are dry, it’s time to water.<br />
+						the top two to three inches of soil are dry, it's time to water.<br />
 						#3 Set a kitchen timer when using the hose as a reminder to turn
 						it off. A running hose can discharge up to 10 gallons per minute.<br />
 						#4 Check your sprinkler system frequently and adjust sprinklers so
@@ -292,12 +314,12 @@
 						sometimes algae or fungi grow.<br /> #13 Adjust your watering
 						schedule each month to match seasonal weather conditions and
 						landscape requirements.<br /> #14 Install a rain sensor on your
-						irrigation controller so your system won’t run when it’s raining.<br />
+						irrigation controller so your system won't run when it's raining.<br />
 						#15 Water dry spot by hand instead of running the whole irrigation
-						system longer.<br /> #16 Don’t water your lawn on windy days when
+						system longer.<br /> #16 Don't water your lawn on windy days when
 						most of the water blows away or evaporates.<br /> #17 Use drip
 						irrigation for shrubs and trees to apply water directly to the
-						roots, where it’s needed.<br /> #18 Water your plants deeply but
+						roots, where it's needed.<br /> #18 Water your plants deeply but
 						less frequently to encourage deep root growth and drought
 						tolerance.<br /> #19 Use sprinklers that deliver big drops of
 						water close to the ground. Smaller drops and mist often evaporate
@@ -308,20 +330,21 @@
 						overflow.<br /> #22 Remember to periodically check your sprinkler
 						system valves for leaks, and to keep sprinkler heads in good
 						shape.<br /> #23 Spring is a great time to give your irrigation
-						system a checkup to ensure it’s working efficiently.<br /> #24
+						system a checkup to ensure it's working efficiently.<br /> #24
 						Pruning properly can help your plants use water more efficiently.<br />
-					</div>
-				</div>
-			</form>
-		</div>
-		<div id="collapseOutdoor4" class="accordion-body collapse in ">
-			<form class="navbar-form navbar-left">
-				<div class="accordion-heading" id="outdoor-pool">
-					<a class="accordion-toggle" data-toggle="collapse"
-						data-parent="#Outdoor" href="#pool-info"> Pool </a>
-				</div>
-				<div class="accordion-body collapse" id="pool-info">
-					<div class="form-group"></div>
+              </div>
+            </div>
+          </div>
+        </div>          
+
+          <div class="accordion-group">
+            <div class="accordion-heading">
+              <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2x" href="#pool">
+                Pool
+              </a>
+            </div>
+            <div id="pool" class="accordion-body collapse">
+              <div class="accordion-inner">
 					#1 Use a pool cover to help keep your pool clean, reduce chemical
 					use and prevent water loss through evaporation.<br /> #2 Make sure
 					your swimming pools, fountains and ponds are equipped with
@@ -330,7 +353,7 @@
 					back-washing your pool, consider using the water on salt-tolerant
 					plants in the landscape.<br /> #5 Minimize or eliminate the use of
 					waterfalls and sprays in your pool. Aeration increases evaporation.<br />
-					#6 Don’t overfill the pool. Lower water levels will reduce water
+					#6 Don't overfill the pool. Lower water levels will reduce water
 					loss due to splashing.<br /> #7 Keep water in the pool when
 					playing, it will save water.<br /> #8 Instead of building a
 					private pool, join a community pool.<br /> #9 Trickling or
@@ -338,28 +361,31 @@
 					spray water into the air.<br /> #10 Use a grease pencil to conduct
 					a bucket test to check for pool leaks. An unnatural water level
 					drop may indicate a leak.<br />
-				</div>
-			</form>
-		</div>
-		<div id="collapseOutdoor5" class="accordion-body collapse in ">
-			<form class="navbar-form navbar-left">
-				<div class="accordion-heading" id="outdoor-general">
-					<a class="accordion-toggle" data-toggle="collapse"
-						data-parent="#Outdoor" href="#general-outinfo"> General </a>
-				</div>
-				<div class="accordion-body collapse" id="general-outinfo">
-					<div class="form-group"></div>
+              </div>
+            </div>
+          </div>
+        </div>          
+
+          <div class="accordion-group">
+            <div class="accordion-heading">
+              <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2x" href="#out-general">
+                General
+              </a>
+            </div>
+            
+            <div id="out-general" class="accordion-body collapse">
+              <div class="accordion-inner">
 					#1 Winterize outdoor spigots when temperatures dip below freezing
 					to prevent pipes from leaking or bursting.<br /> #2 For more
 					immediate hot water and energy savings, insulate hot water pipes.<br />
 					#3 Use a commercial car wash that recycles water. Or, wash your car
-					on the lawn, and you’ll water your grass at the same time.<br />
+					on the lawn, and you'll water your grass at the same time.<br />
 					#4 Use a hose nozzle or turn off the water while you wash your car.
-					You’ll save up to 100 gallons every time.<br /> #5 Wash your pets
+					You'll save up to 100 gallons every time.<br /> #5 Wash your pets
 					outdoors, in an area of your lawn that needs water.<br /> #6 When
 					cleaning out fish tanks, give the nutrient-rich water to your
 					non-edible plants.<br /> #7 When you give your pet fresh water,
-					don’t throw the old water down the drain. Use it to water your
+					don't throw the old water down the drain. Use it to water your
 					trees or shrubs.<br /> #8 Use a broom instead of a hose to clean
 					patios, sidewalks and driveways, and save water every time.<br />
 					#9 Evaporative coolers require a seasonal maintenance check. For
@@ -375,9 +401,18 @@
 					this could save gallons of water and prevent damage.<br /> #15
 					Install a thermostat and timer on your evaporative cooler so it
 					only operates when necessary.<br />
-				</div>
-			</form>
-		</div>
-	</div>
+              </div>
+            </div>
+          </div>
+
+        </div>          
+
+
+        <!-- Inner accordion ends here -->
+
+      </div>
+    </div>
+  </div>
+  
 </div>
 </html>
