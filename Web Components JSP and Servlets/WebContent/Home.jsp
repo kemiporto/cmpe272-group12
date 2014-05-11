@@ -57,35 +57,32 @@
             <tr>
                 <td style=" background-color: white;">
                 <div >
-                    <header style="text-align: left; font-size: 30; font-family: Georgia;">Water Usage<header>
-                    <p style="width: 210; font-size: 15; font-family: Georgia;">Use our Water Usage calculator to find out the Gallons of Water you are using everyday in your household. </p>
+                    <header style="text-align: left; font-size: 30; font-family: Georgia;">About<header>
+                    <p style="width: 210; font-size: 15; font-family: Georgia;">California is facing its worst drought in more than 100 years, and one with no end insight.Conserving water has never been so important.Everyone should do what they can to reduce the water use.</p>
                 
                 </div>
                 </td>
                 
                 <td style=" background-color: white;">
                 <div >
-                    <header style="text-align: left; font-size: 30; font-family: Georgia;">Save Water<header>
-                    <p style="width: 210; font-size: 15; font-family: Georgia;">California is facing its worst drought in more than 100 years, and one with no end insight.Conserving water has never been so important.
-                    Everyone should do what they can to reduce the water use.We have tips for you to Save Water for indoors and outdoors.</p>
+                    <header style="text-align: left; font-size: 30; font-family: Georgia;">About<header>
+                    <p style="width: 210; font-size: 15; font-family: Georgia;">California is facing its worst drought in more than 100 years, and one with no end insight.Conserving water has never been so important.Everyone should do what they can to reduce the water use.</p>
                 
                 </div>
                 </td>
                 
                 <td style=" background-color: white;">
                 <div >
-                    <header style="text-align: left; font-size: 30; font-family: Georgia;">Read your Water Bill<header>
-                    <p style="width: 210; font-size: 15; font-family: Georgia;">How to decipher your Water Bill ?Use our interactive bill reader and get a better
-                    understanding of your household's water consumption.</p>
+                    <header style="text-align: left; font-size: 30; font-family: Georgia;">About<header>
+                    <p style="width: 210; font-size: 15; font-family: Georgia;">California is facing its worst drought in more than 100 years, and one with no end insight.Conserving water has never been so important.Everyone should do what they can to reduce the water use.</p>
                 
                 </div>
                 </td>
                 
                 <td style=" background-color: white;">
                 <div >
-                    <header style="text-align: left; font-size: 30; font-family: Georgia;">Drought Monitoring<header>
-                    <p style="width: 210; font-size: 15; font-family: Georgia;">Want to know the current situation of California Drought?
-                    Refer this page and see the charts.</p>
+                    <header style="text-align: left; font-size: 30; font-family: Georgia;">About<header>
+                    <p style="width: 210; font-size: 15; font-family: Georgia;">California is facing its worst drought in more than 100 years, and one with no end insight.Conserving water has never been so important.Everyone should do what they can to reduce the water use.</p>
                 
                 </div>
                 </td>

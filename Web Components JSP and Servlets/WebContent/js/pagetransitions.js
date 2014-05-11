@@ -135,7 +135,7 @@ var PageTransitions = (function() {
 		isAnimating = true;
 		
 		if( nextPageGoto > pagesCount ) {
-			nextPageGoto = 1;
+			nextPageGoto = 0;
 		}
 		
 		var $currPage = $pages.eq( current );
