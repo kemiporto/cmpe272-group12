@@ -59,7 +59,7 @@
         <li id="li2" ><a>Water Usage</a></li>
         <li id="li3" ><a>Save Water</a></li>
         <li id="li4" ><a>Read Your Water Bill</a></li>
-        <li id="li5" ><a>About Us</a></li>
+        <li id="li5" ><a>Drought Monitoring</a></li>
         <script>
                 $('#myTab a').click(function (e) {
                         e.preventDefault();
@@ -76,7 +76,7 @@
                     <div class="pt-page pt-page-2"><%@ include file="WaterUsage.jsp" %></div>
                     <div class="pt-page pt-page-3"><%@ include file="SaveWater.jsp" %></div>
                     <div class="pt-page pt-page-4"><%@ include file="ReadYourBill.jsp" %></div>
-                    <div class="pt-page pt-page-5"><h1><span>D collection of</span><strong>Page</strong> Transitions</h1></div>
+                    <div class="pt-page pt-page-5"><%@ include file="DroughtMonitoring.jsp" %></div>
             </div>
 
             <div class="pt-message">

@@ -31,7 +31,7 @@
     </head>
     
     <div class="container" style="max-width: 1000px;">
-        <div id="chart" style="width: 1000px; height: 600px;"></div>                   
+        <div id="chart" style="width: 850px; height: 600px;"></div>                   
     </div>
     
 </html>
