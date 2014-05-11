@@ -1,11 +1,11 @@
 
 <html>
 <head>
-<title>Homepage</title>
-
 </head>
 
 
+    
+<div class="container" style="max-width: 1000px;">
 <h5>How to save water changing little things on our daily routine</h5>
 
  <div class="accordion" id="xaccordion1">
@@ -411,4 +411,5 @@
         <!-- Inner accordion ends here -->
 
       </div>
+    </div>
 </html>

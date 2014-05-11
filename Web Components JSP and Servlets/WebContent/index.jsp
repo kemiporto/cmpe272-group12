@@ -56,12 +56,6 @@
         <li id="li3" ><a>Save Water</a></li>
         <li id="li4" ><a>Read Your Water Bill</a></li>
         <li id="li5" ><a>Drought Monitoring</a></li>
-        <script>
-                $('#myTab a').click(function (e) {
-                        e.preventDefault();
-                        $(this).tab('show');
-                });
-        </script>
         </ul>     
     </div>    
     

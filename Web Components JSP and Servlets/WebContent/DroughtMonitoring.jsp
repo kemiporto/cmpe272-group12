@@ -92,7 +92,7 @@
     </script>
 </head>
 
-
+<div class="container" style="max-width: 1000px;">
     <h5>Information about California drought situation</h5>
 
     <div class="accordion" id="accordion11">
@@ -118,6 +118,8 @@
         </div>
       </div>
     </div>
+    
+    <br/>
 
     <div class="accordion" id="accordion11">
       <div class="accordion-group">
@@ -142,5 +144,5 @@
         </div>
       </div>
     </div>
-    
+</div>
 </html>

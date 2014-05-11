@@ -78,13 +78,13 @@ var PageTransitions = (function() {
 			if( isAnimating ) {
 				return false;
 			}
-			nextPage( animcursor );
+			nextPageGoto = 2;
 			if( nextPageGoto > current ) {
 				animcursor = 1;
 			} else{				
 				animcursor = 2;
 			}
-			nextPageGoto = 2;
+			nextPage( animcursor );
 		} );
 
 		$Tab4.on( 'click', function() {
