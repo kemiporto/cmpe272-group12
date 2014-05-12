@@ -1,7 +1,7 @@
 cmpe272-group12
 ===============
 
-This project goal is to bring more awareness to the California drought situation, and to give suggestion on how one can use water more wisely and avoid waste.
+This project was made to the San Jose State University CMPE272 team project and its goal is to bring more awareness to the California drought situation and our water usage, and to give suggestion on how one can use water more wisely and avoid waste. We also give the user a rought estimation of how much water he uses on a daily basis based on a few questions asked on the site, where are the areas in the house that the water is being spent, and how one can better understand its water bills.
 
 The easiest way to deploy this website as it is, is to use the cmpe272.war file. You can do it by installing Tomcat7 and moving this file to /var/lib/tomcat/webapp/.
 
